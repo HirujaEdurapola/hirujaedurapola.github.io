@@ -645,6 +645,17 @@ code{
     h4{
         font-size: calc((1vw + 1vh) * 1.8);
     }
+
+    .project-title{
+        font-size: calc(var(--formula-h1-hiruja) * 1.5);
+        margin-top: auto;
+    }
+    
+    .project-desc{
+        font-size: calc(var(--formula-h1-hiruja) * 0.9);
+        padding: 1rem;
+        text-align: justify;
+    }
 }
 
 @keyframes shutdown {
