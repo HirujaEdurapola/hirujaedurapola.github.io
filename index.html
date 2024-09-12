@@ -8,23 +8,22 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="https://hirujaedurapola.github.io/SJML/sjml.css"> -->
      <link rel="stylesheet" href="css/sjml.css">
-    <meta description="The Official Website of Hiruja Edurapola">
-    <meta keywords="Hiruja Edurapola, Hiruja, Edurapola, SJ, HirujaSJ, Hiruja Edurapola Website, Hiruja Website, Hiruja Edurapola Github">
 </head>
 
 <body>
-    <div class="nav">
+    <div class="nav" id="primary-nav">
         <h1 class="nav-item-hiruja"><a href="#">Hiruja Edurapola</a></h1>
         <div class="nav-box">
             <h1 class="nav-item"><a href="#">Home</a></h1>
             <h1 class="nav-item"><a href="#projects">Projects</a></h1>
-            <h1 class="nav-item"><a href="#contact">Contact</a></h1>
+            <h1 class="nav-item"><a href="./report.html">Academics</a></h1>
+            <h1 class="nav-item"><a href="mailto:videohiruja@gmail.com">Contact</a></h1>
         </div>
     </div>
 
     <div class="hello">
-        <img src="./img/pfp.jpeg" alt="Hiruja Edurapola" class="hello-img" draggable="false">
-        <h1 class="hello-text">hello, i'm hiruja</h1>
+        <img src="./img/pfp.jpeg" alt="Hiruja Edurapola" class="hello-img" draggable="false" id="loading-image">
+        <h1 class="hello-text" id="hiruja-loading-text"><span>hello,</span> <span>i'm hiruja</span></h1>
     </div>
 
     <div class="run-me">
@@ -99,51 +98,46 @@
                 <h1 class="age-txts">Seconds</h1>
             </div>
         </div>
-        <div class="age-div">
-            <h1 class="age-txt-head">Old</h1>
+        <div class="age-div age-div-bot">
+            <h1 class="age-txt-head age-txt-body">Old</h1>
         </div>
     </div>
 <br><br>
+
+
     <!-- <div class="age-div projects-txt"><h1 class="age-txt-head projects-banner">Projects</h1></div> -->
     <div class="projects" id="projects">
 
-        <div class="card">
-            <img src="./img/trainer.png" alt="Thumbnail" style="width:100%">
-            <div class="container">
-              <h4><b>SJ Trainer</b></h4>
-              <p>SJ Trainer is a free, ad-free chess training tool that offers users positions from real games for practice. Unlike traditional puzzles, it provides unbiased challenges with no preset advantages or disadvantages. Simply visit the website, analyze the position displayed, calculate your move, and enter it. </p>
-              <!-- While currently in beta with a limited game selection, SJ Trainer promises future updates to expand its database. -->
-              <button class="launch" onclick="launch(`https://hirujaedurapola.github.io/SJ-Trainer/`)" style="background-color: rgb(83, 219, 79); color: white;margin-top: 10%;">View</button>
+        <div class="project-card">
+            <div class="project-card-surface">
+                <h1 class="project-title">SJ Trainer</h1>
+                <h3 class="project-desc">SJ Trainer is a free, ad-free chess training tool that offers users positions from real games for practice. Unlike traditional puzzles, it provides unbiased challenges with no preset advantages or disadvantages. Simply visit the website, analyze the position displayed, calculate your move, and enter it.</h3>
+                <button class="project-but"  onclick="launch('https://hirujaedurapola.github.io/SJ-Trainer/')">View</button>
             </div>
-           
-          </div>
-          <div class="card">
-            <img src="./img/sjml.jpg" alt="Thumbnail" style="width:100%">
-            <div class="container">
-              <h4><b>SJML</b></h4>
-              <p>SJML, is a toolkit designed to enhance web development projects with captivating CSS features. With SJML, developers can effortlessly incorporate stylish elements into their websites, elevating the user experience to new heights.
-    
-                Utilizing the power of CSS, SJML offers a wide range of features and effects, from animations to transitions and beyond. 
-                
-                </p>
-                <button class="launch" onclick="launch(`https://hirujaedurapola.github.io/SJML/`)" style="background-color: purple; color: white; ">View</button>
+        </div>
+
+        <div class="project-card">
+            <div class="project-card-surface">
+                <h1 class="project-title">SJML</h1>
+                <h3 class="project-desc">SJML, is a toolkit designed to enhance web development projects with captivating CSS features. With SJML, developers can effortlessly incorporate stylish elements into their websites, elevating the user experience to new heights.
+
+                    Utilizing the power of CSS, SJML offers a wide range of features and effects, from animations to transitions and beyond. </h3>
+                <button class="project-but"  onclick="launch('https://hirujaedurapola.github.io/SJML/')">View</button>
             </div>
-          </div>
-          <div class="card">
-            <img src="./img/woa.jpeg" alt="Thumbnail" style="width:100%">
-            <div class="container">
-              <h4><b>Web of Answers</b></h4>
-              <p>Web of Answer is like the Magic 8 Ball. But actually a Magic 400 Web! Test your fortune through your browser with just a click. Visit now and find answers for your Yes and No questions!!!
-                
-                </p>
-                <button class="launch" onclick="launch(`https://hirujaedurapola.github.io/Projects/Web-Of-Answers/`)" style="background-color: teal; color: white; margin-top: 30%;">View</button>
+        </div>
+
+        <div class="project-card">
+            <div class="project-card-surface">
+                <h1 class="project-title">Web of Answers</h1>
+                <h3 class="project-desc">Web of Answer is like the Magic 8 Ball. But actually a Magic 400 Web! Test your fortune through your browser with just a click. Visit now and find answers for your Yes and No questions!!!</h3>
+                <button class="project-but"  onclick="launch('`https://hirujaedurapola.github.io/Projects/Web-Of-Answers/')">View</button>
             </div>
-          </div>
+        </div>
 
           
     </div>
 
-    <div class="contact-me" id="contact">
+    <!-- <div class="contact-me" id="contact">
         <h1>Contact Card</h1><br>
        <div class="h1">
         Name: Hiruja Edurapola<br>
@@ -154,33 +148,10 @@
         Website: <a href="#">hirujaedurapola.github.io</a>
        </div>
       </div>
-   
-    <script src="app.js"></script>
-    <script src="lang.js"></script>
-    <script>
-        function openHiruja(link) {
-            window.open(link)
-        }
-
-        function launch(link){
-            window.open(link)
-        }
-
-        function copyCode(text) {
-//   // Get the text field
-//   var copyText = document.getElementById("code");
-
-//   // Select the text field
-//   copyText.select();
-//   copyText.setSelectionRange(0, 99999); // For mobile devices
-
-   // Copy the text inside the text field
-  navigator.clipboard.writeText(text);
-
-  // Alert the copied text
-//   alert("Copied the text: ");
-}
-    </script>
+    -->
+    <script src="./js/app.js"></script>
+    <script src="./js/lang.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

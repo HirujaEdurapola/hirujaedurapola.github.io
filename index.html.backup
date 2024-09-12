@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiruja Edurapola</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="https://hirujaedurapola.github.io/SJML/sjml.css"> -->
+</head>
+
+<body>
+    <div class="nav">
+        <h1 class="nav-item-hiruja"><a href="#">Hiruja Edurapola</a></h1>
+        <div class="nav-box">
+            <h1 class="nav-item"><a href="#">Home</a></h1>
+            <h1 class="nav-item"><a href="#about">About</a></h1>
+            <h1 class="nav-item"><a href="#projects">Projects</a></h1>
+        </div>
+    </div>
+
+    <div class="hello">
+        <img src="./img/pfp.jpeg" alt="Hiruja Edurapola" class="hello-img" draggable="false">
+        <h1 class="hello-text">hello, i'm hiruja</h1>
+    </div>
+
+    <div class="links" id="socials">
+        <!-- <div class="link-txt">
+            <h1 class="link-topic">My Socials</h1>
+        </div> -->
+        <div class="link-boxes">
+            <div class="link-box" onclick="openHiruja(`https://github.com/HirujaEdurapola/`)">
+                <git class="link-icon"></git>
+                <h1 class="link-box-item">Github</h1>
+            </div>
+            <div class="link-box" onclick="openHiruja(`https://www.youtube.com/@HirujaEdurapola/`)">
+                <yt class="link-icon"></yt>
+                <h1 class="link-box-item">Youtube</h1>
+            </div>
+        </div>
+    </div>
+    <div class="large-div">
+        <div class="age-div">
+            <h1 class="age-txt-head">I am</h1>
+        </div>
+        <div class="age">
+            <div class="age-box">
+                <div id="age-card">
+                    <h1 id="years">00</h1>
+                </div>
+                <div id="age-card">
+                    <h1 id="months">00</h1>
+                </div>
+                <div id="age-card">
+                    <h1 id="days">00</h1>
+                </div>
+                <div id="age-card">
+                    <h1 id="hours">00</h1>
+                </div>
+                <div id="age-card">
+                    <h1 id="minutes">00</h1>
+                </div>
+                <div id="age-card">
+                    <h1 id="seconds">00</h1>
+                </div>
+                <h1 class="age-txt">Years</h1>
+                <h1 class="age-txt">Months</h1>
+                <h1 class="age-txt">Days</h1>
+                <h1 class="age-txt">Hours</h1>
+                <h1 class="age-txt">Minutes</h1>
+                <h1 class="age-txt">Seconds</h1>
+            </div>
+            <div class="txt-mobile">
+                <h1 class="age-txts">Years</h1>
+                <h1 class="age-txts">Months</h1>
+                <h1 class="age-txts">Days</h1>
+                <h1 class="age-txts">Hours</h1>
+                <h1 class="age-txts">Minutes</h1>
+                <h1 class="age-txts">Seconds</h1>
+            </div>
+        </div>
+        <div class="age-div">
+            <h1 class="age-txt-head">Old</h1>
+        </div>
+    </div>
+
+    <!-- <div class="age-div projects-txt"><h1 class="age-txt-head projects-banner">Projects</h1></div> -->
+    <div class="projects" id="projects">
+
+        <!-- <div class="wrapper">
+            /////
+            <div class="single-card">
+                <div class="front" style="background-image: url('./img/trainer.png');"></div>
+                <div class="back">
+                    <div class="content">
+                        <h2 class="card-txt">SJ Trainer</h2>
+                        <h4>A 100% Free Web-Based Chess Trainer.</h4>
+                        <p>Written In:</p>
+
+                        <div class="bars">
+
+                            <div class="bar">
+                                <div class="lang-name">
+                                    <h1>Javascript: </h1>
+                                </div>
+                                <div class="lang">
+                                    <div class="lang-percentage" id="langPer" hiruja="js">84.8%</div>
+                                </div>
+                            </div>
+
+                            <div class="bar">
+                                <div class="lang-name">
+                                    <h1>HTML:</h1>
+                                </div>
+                                <div class="lang">
+                                    <div class="lang-percentage" id="langPer" hiruja="html"
+                                        style="background-color: #e44b23;">14.1%</div>
+                                </div>
+
+                            </div>
+
+                            <div class="bar">
+                                <div class="lang-name">
+                                    <h1>JSON:</h1>
+                                </div>
+                                <div class="lang">
+                                    <div class="lang-percentage" id="langPer" hiruja="json"
+                                        style="background-color: #40d47e; width: 4%;">1%</div>
+                                </div>
+                            </div>
+
+                            <div class="bar">
+                                <div class="lang-name">
+                                    <h1>CSS:</h1>
+                                </div>
+                                <div class="lang">
+                                    <div class="lang-percentage" id="langPer" hiruja="css"
+                                        style="background-color: #563d7c; width: 3%;">0.1%</div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            /////////////////
+
+            <div class="single-card">
+                <div class="front" style="background-image: url('./img/trainer.png');"></div>
+                <div class="back">
+                    <div class="content">
+                        <h2 class="card-txt">SJ Trainer</h2>
+                        <h4>A 100% Free Web-Based Chess Trainer.</h4>
+                        <p>Written In:</p>
+
+                        <div class="bars">
+
+                            <div class="bar">
+                                <div class="lang-name">
+                                    <h1>Javascript: </h1>
+                                </div>
+                                <div class="lang">
+                                    <div class="lang-percentage" id="langPer" hiruja="js" style="background-color: #f1e05a; width: 84.8%;">84.8%</div>
+                                </div>
+                            </div>
+
+                            <div class="bar">
+                                <div class="lang-name">
+                                    <h1>HTML:</h1>
+                                </div>
+                                <div class="lang">
+                                    <div class="lang-percentage" id="langPer" hiruja="html"
+                                        style="background-color: #e44b23;">14.1%</div>
+                                </div>
+
+                            </div>
+
+                            <div class="bar">
+                                <div class="lang-name">
+                                    <h1>JSON:</h1>
+                                </div>
+                                <div class="lang">
+                                    <div class="lang-percentage" id="langPer" hiruja="json"
+                                        style="background-color: #40d47e; width: 4%;">1%</div>
+                                </div>
+                            </div>
+
+                            <div class="bar">
+                                <div class="lang-name">
+                                    <h1>CSS:</h1>
+                                </div>
+                                <div class="lang">
+                                    <div class="lang-percentage" id="langPer" hiruja="css"
+                                        style="background-color: #563d7c; width: 3%;">0.1%</div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             ///////////////
+        </div> -->
+    </div>
+    <script src="app.js"></script>
+    <script src="lang.js"></script>
+    <script>
+        function openHiruja(link) {
+            window.open(link)
+        }
+
+
+    </script>
+</body>
+
+</html>
