@@ -234,17 +234,17 @@ function updateData(){
         }
         else if (selectedTerm === 2){
             Religion.innerHTML ="TBD"
-            Sinhala.innerHTML ="TBD"
-            English.innerHTML ="TBD"
-            Maths.innerHTML ="TBD"
+            Sinhala.innerHTML =80
+            English.innerHTML =90
+            Maths.innerHTML =72
             Science.innerHTML ="TBD"
             HistoryS.innerHTML ="TBD"
             Geography.innerHTML ="TBD"
-            Civic.innerHTML ="TBD"
+            Civic.innerHTML =84
             Tamil.innerHTML ="TBD"
-            Drama.innerHTML ="TBD"
+            Drama.innerHTML =87
             PTS.innerHTML ="TBD"
-            Health.innerHTML ="TBD"
+            Health.innerHTML =76
 
             average.innerHTML = "TBD"
             classPlace.innerHTML = "TBD"
