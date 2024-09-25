@@ -233,23 +233,23 @@ function updateData(){
             total.innerHTML = "N/A"
         }
         else if (selectedTerm === 2){
-            Religion.innerHTML ="TBD"
-            Sinhala.innerHTML ="TBD"
-            English.innerHTML ="TBD"
-            Maths.innerHTML ="TBD"
-            Science.innerHTML ="TBD"
-            HistoryS.innerHTML ="TBD"
-            Geography.innerHTML ="TBD"
-            Civic.innerHTML ="TBD"
-            Tamil.innerHTML ="TBD"
-            Drama.innerHTML ="TBD"
-            PTS.innerHTML ="TBD"
-            Health.innerHTML ="TBD"
+            Religion.innerHTML = 86
+            Sinhala.innerHTML = 80
+            English.innerHTML = 90
+            Maths.innerHTML = 75
+            Science.innerHTML = 60
+            HistoryS.innerHTML = 76
+            Geography.innerHTML = 70
+            Civic.innerHTML = 84
+            Tamil.innerHTML = 68
+            Drama.innerHTML = 87
+            PTS.innerHTML = 85
+            Health.innerHTML = 76
 
-            average.innerHTML = "TBD"
+            average.innerHTML = 78.083
             classPlace.innerHTML = "TBD"
             mediumPlace.innerHTML = "TBD"
-            total.innerHTML = "TBD"
+            total.innerHTML = 937
         }
         else if (selectedTerm === 3){
             Religion.innerHTML ="TBD"
