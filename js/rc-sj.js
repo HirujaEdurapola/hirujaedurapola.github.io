@@ -1,3 +1,6 @@
+// Hello there!
+// Below this you should find the ugliest shit of code you've ever seen
+
 const Religion = document.querySelector("#marks-rel")
 const Sinhala = document.querySelector("#marks-sin")
 const English = document.querySelector("#marks-eng")
@@ -29,8 +32,7 @@ const total = document.querySelector("#tot")
 let selectedYear = 2024
 let selectedTerm = 2
 
-// document.onload(indicateSelection())
-indicateSelection()
+indicateSelection() // See the code for this function. You will rethink about your existence. (Line 278)
 updateData()
 
 function updateData(){
@@ -247,8 +249,8 @@ function updateData(){
             Health.innerHTML = 76
 
             average.innerHTML = 78.083
-            classPlace.innerHTML = "TBD"
-            mediumPlace.innerHTML = "TBD"
+            classPlace.innerHTML = 5
+            mediumPlace.innerHTML = 5
             total.innerHTML = 937
         }
         else if (selectedTerm === 3){
