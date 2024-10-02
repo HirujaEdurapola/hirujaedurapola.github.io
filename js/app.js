@@ -1,55 +1,71 @@
 // let hiruja = "smart"
 
-  function updateAge() {
+function updateAge() {
+  //const dob = new Date('2010-10-02T18:19:00Z') Commented becuz the time is local and not UTC 0
+  const dob = new Date('2010-10-02T12:49:00Z'); // So if +5.30, you actually subtract it
+  
+  const currentDate = new Date().toLocaleString('en-US', { timeZone: 'Asia/Colombo' });
+  const now = new Date(currentDate);
 
-    const dob = new Date('2010-10-03T18:19:00Z');
-    
- 
-    const currentDate = new Date();
-    
-
-    let differenceMs = currentDate - dob;
-    
-
-    const years = Math.floor(differenceMs / (1000 * 60 * 60 * 24 * 365.25));
-    differenceMs -= years * (1000 * 60 * 60 * 24 * 365.25);
-    
-
-    const months = Math.floor(differenceMs / (1000 * 60 * 60 * 24 * 30.44));
-    differenceMs -= months * (1000 * 60 * 60 * 24 * 30.44);
-    
-
-    const days = Math.floor(differenceMs / (1000 * 60 * 60 * 24));
-    differenceMs -= days * (1000 * 60 * 60 * 24);
-    
-
-    const hours = Math.floor(differenceMs / (1000 * 60 * 60));
-    differenceMs -= hours * (1000 * 60 * 60);
-    
-
-    const minutes = Math.floor(differenceMs / (1000 * 60));
-    differenceMs -= minutes * (1000 * 60);
-    
-    const seconds = Math.floor(differenceMs / 1000);
-    
-   
-    const currentYear = new Date().getFullYear();
-    document.getElementById("years").innerText = years
-    document.getElementById("months").innerText = months
-    document.getElementById("days").innerText = days
-    document.getElementById("hours").innerText = hours
-    document.getElementById("minutes").innerText = minutes
-    document.getElementById("seconds").innerText = seconds
+  let years = now.getFullYear() - dob.getFullYear();
+  let months = now.getMonth() - dob.getMonth();
+  let days = now.getDate() - dob.getDate();
+  let hours = now.getHours() - dob.getHours();
+  let minutes = now.getMinutes() - dob.getMinutes();
+  let seconds = now.getSeconds() - dob.getSeconds();
 
 
+  if (seconds < 0) {
+      seconds += 60;
+      minutes--;
+  }
+  if (minutes < 0) {
+      minutes += 60;
+      hours--;
+  }
+  if (hours < 0) {
+      hours += 24;
+      days--;
+  }
+  if (days < 0) {
+      const lastMonth = new Date(now.getFullYear(), now.getMonth(), 0).getDate();
+      days += lastMonth;
+      months--;
+  }
+  if (months < 0) {
+      months += 12;
+      years--;
+  }
+
+  document.getElementById("years").innerText = years;
+  document.getElementById("months").innerText = months;
+  document.getElementById("days").innerText = days;
+  document.getElementById("hours").innerText = hours;
+  document.getElementById("minutes").innerText = minutes;
+  document.getElementById("seconds").innerText = seconds;
+
+  if (years > 0 && months === 0 && days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
+    triggerConfetti();
+  }
 }
 
-// while (hiruja == "smart") {
-//     document.getElementById("years").innerText = years
-//     document.getElementById("months").innerText = months
-//     document.getElementById("days").innerText = seconds
-// }
+function triggerConfetti() {
+  for (let i = 0; i < 100; i++) {
+      const confetti = document.createElement('div');
+      confetti.classList.add('confetti');
+      confetti.style.left = Math.random() * 100 + 'vw';
+      confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+      confetti.style.animationDuration = (Math.random() * 2 + 3) + 's'; // Random fall duration
+      confetti.style.opacity = Math.random(); // Random opacity
+      document.getElementById('ageSJ').appendChild(confetti);
+      
+      // Remove confetti after animation
+      setTimeout(() => {
+          confetti.remove();
+      }, 5000);
+  }
+}
 
-updateAge()
+updateAge();
 
-setInterval(updateAge, 1000)
+setInterval(updateAge, 1000);
