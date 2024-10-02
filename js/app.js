@@ -2,7 +2,7 @@
 
   function updateAge() {
 
-    const dob = new Date('2010-10-02T18:19:00Z');
+    const dob = new Date('2010-10-03T18:19:00Z');
     
  
     const currentDate = new Date();
