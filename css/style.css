@@ -139,7 +139,7 @@ a{
 }
 
 .links{
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -194,6 +194,7 @@ a{
     /* height: 2vh; */
 }
 
+
 @keyframes load{
     0%,40%{
         opacity: 0;
@@ -210,6 +211,7 @@ a{
 ::-webkit-scrollbar-track{
     background: linear-gradient(0deg, black, black,black, black,#202020, #202020);
     border-radius: 10px;
+    border-top-left-radius: 0;
 }
 
 ::-webkit-scrollbar-thumb{
@@ -495,11 +497,20 @@ chess{
 
 lichess{
     display: inline-block;
-  width: 2vw;
-  height: 2.2vw;
+    width: 2vw;
+    height: 2.2vw;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-image: url('../img/lichess.png');
+}
+
+hackerrank{
+    display: inline-block;
+    width: 2vw;
+    height: 2.2vw;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url('../img/hackerrank.svg');
 }
 
 .code-area{
@@ -710,6 +721,31 @@ nav.burger {
 
 li{
     list-style: none;
+}
+
+#ageSJ {
+    position: relative;
+    overflow: hidden;
+}
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red; /* Change to your desired colors */
+    opacity: 0.8;
+    animation: fall linear forwards;
+}
+
+footer{
+    animation: shutdown 7s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-bg-color);
+}
+@keyframes fall {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
 }
 
 @media (max-width: 860px) {

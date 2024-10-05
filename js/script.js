@@ -1,3 +1,5 @@
+const Copyright = document.querySelector("#yearC")
+
 function openHiruja(link) {
     window.open(link)
 }
@@ -45,3 +47,4 @@ setTimeout(() => {
 //     // document.getElementById("primaryNav").style.animationDuration = "200ms"
 //     console.error("")
 // }
+Copyright.innerHTML = new Date().getFullYear()
