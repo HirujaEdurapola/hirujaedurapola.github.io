@@ -743,9 +743,127 @@ footer{
     align-items: center;
     background-color: var(--primary-bg-color);
 }
+
+/* About Me */
+
+.about-me{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    animation: var(--loading-animation);
+}
+
+.about-me-div{
+    max-width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f2329;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 50%;
+    padding: 0;
+    padding-right: 0.5rem;
+}
+
+.about-title, .about-title-m{
+    font-size: 2.5rem;
+    margin-bottom: 6.25rem;
+    text-decoration: underline;
+    text-decoration-color: salmon;
+    text-decoration-thickness: 0.5rem;
+}
+
+.about-title-m{
+    display: none;
+}
+
+.about-title{
+    display: block;
+}
+
+.about-desc{
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.about-img img{
+    width: 25rem;
+}
+
+.about-langs i{
+    font-size: 2rem;
+}
+
+.about-langs{
+    margin-top: 2rem;
+}
+
 @keyframes fall {
     0% { transform: translateY(0); }
     100% { transform: translateY(100vh); }
+}
+
+@media (max-width: 1050px) {
+    .about-img img{
+        width: 23rem;
+    }
+
+    .about-title{
+        font-size: 2rem;
+        text-decoration-thickness: 0.4rem;
+        margin-bottom: 5rem;
+    }
+}
+
+@media (max-width: 1010px) {
+    .about-img img{
+        width: 22rem;
+    }
+
+    .about-title{
+        font-size: 1.6rem;
+        text-decoration-thickness: 0.4rem;
+        margin-bottom: 5rem;
+    }
+
+    .about-desc{
+        font-size: 1.1rem;
+    }
+
+    .about-langs i{
+        font-size: 1.9rem;
+    }
+}
+
+@media (max-width: 875px) {
+    .about-me-div{
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .about-title-m{
+        display: block;
+        text-align: center;
+        margin-bottom: 3rem;
+        margin-top: 1rem;
+    }
+    .about-title{
+        display: none;
+    }
+    .about-desc{
+        margin: 1rem;
+    }
+    .about-langs i{
+        font-size: 1.8rem;
+    }
+    .about-langs{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.4rem;
+    }
 }
 
 @media (max-width: 860px) {
@@ -874,6 +992,20 @@ footer{
     .nav-item{
         margin-bottom: 3vh;
     } */
+    
+    .about-me-div{
+        background-color: transparent;
+    }
+
+    .about-desc{
+        margin-right: 0;
+        margin-left: 0;
+        font-size: 1rem;
+    }
+
+    .about-langs i{
+        font-size: 1.5rem;
+    }
 
 
 }
