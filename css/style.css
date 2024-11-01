@@ -801,6 +801,45 @@ footer{
     margin-top: 2rem;
 }
 
+/* Achivements Section */
+
+.achievements{
+    animation: var(--loading-animation);
+}
+
+.counters{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 35vh;
+    background-color: #0f0f0fc7;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.counter-icon img{
+    width: 4em;
+}
+
+.counter-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.counter-txt{
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.counter-div{
+    font-weight: 900;
+    font-size: 3em;
+}
+
+
 @keyframes fall {
     0% { transform: translateY(0); }
     100% { transform: translateY(100vh); }
@@ -911,6 +950,12 @@ footer{
         padding: 1rem;
         text-align: justify;
     }
+    .counter-icon img{
+        width: 3.5em;
+    }
+    .counter-txt{
+        font-size: 1.5em;
+    }
 }
 
 @keyframes shutdown {
@@ -1005,6 +1050,13 @@ footer{
 
     .about-langs i{
         font-size: 1.5rem;
+    }
+
+    .counter-txt{
+        font-size: 1.2em;
+    }
+    .counter-div{
+        font-size: 1.5em;
     }
 
 
