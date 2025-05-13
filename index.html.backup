@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiruja Edurapola</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="https://hirujaedurapola.github.io/SJML/sjml.css"> -->
+     <link rel="stylesheet" href="css/sjml.css">
+    <meta name="description" content="The Official Website of Hiruja Edurapola">
+    <meta name="keywords" content="Hiruja, Edurapola, Hiruja Edurapola, Hiruja Edurapola Website, Hiruja Bathika, HirujaSJ, Sri Sumangala College Panadura">
+</head>
+
+<body>
+    <div class="nav" id="primary-nav">
+        <h1 class="nav-item-hiruja"><a href="#">Hiruja Edurapola</a></h1>
+        <div class="nav-box">
+            <h1 class="nav-item"><a href="#">Home</a></h1>
+            <h1 class="nav-item"><a href="#projects">Projects</a></h1>
+            <h1 class="nav-item"><a href="./report.html">Academics</a></h1>
+            <h1 class="nav-item"><a href="mailto:videohiruja@gmail.com">Contact</a></h1>
+        </div>
+    </div>
+
+    <div class="hello">
+        <img src="./img/pfp.jpeg" alt="Hiruja Edurapola" class="hello-img" draggable="false" id="loading-image">
+        <h1 class="hello-text" id="hiruja-loading-text"><span>hello,</span> <span>i'm hiruja</span></h1>
+    </div>
+
+    <div class="run-me">
+        <div class="code-area" value="Hello World" id="code">
+            <code>npx hiruja</code>
+            <img src="./img/copy.svg" alt="Copy" onclick="copyCode('npx hiruja')" class="but-copy" width="1.5vw">
+        </div>
+        
+    
+    </div>
+
+    <div class="links" id="socials">
+        <!-- <div class="link-txt">
+            <h1 class="link-topic">My Socials</h1>
+        </div> -->
+        <div class="link-boxes">
+            <div class="link-box" onclick="openHiruja(`https://github.com/HirujaEdurapola/`)">
+                <git class="link-icon"></git>
+                <h1 class="link-box-item">Github</h1>
+            </div>
+            <div class="link-box" onclick="openHiruja(`https://www.youtube.com/@HirujaEdurapola/`)">
+                <yt class="link-icon"></yt>
+                <h1 class="link-box-item">Youtube</h1>
+            </div>
+            <div class="link-box" onclick="openHiruja(`https://www.chess.com/member/devonsj/`)">
+                <chess class="link-icon">P</chess>
+                <h1 class="link-box-item">Chess.com</h1>
+            </div>
+            <div class="link-box" onclick="openHiruja(`https://lichess.org/@/NiceTry_GG/`)">
+                <lichess class="link-icon"></lichess>
+                <h1 class="link-box-item">Lichess</h1>
+            </div>
+        </div>
+    </div>
+    <div class="large-div">
+        <div class="age-div">
+            <h1 class="age-txt-head">I am</h1>
+        </div>
+        <div class="age">
+            <div class="age-box">
+                <div id="age-card">
+                    <h1 id="years">00</h1>
+                </div>
+                <div id="age-card">
+                    <h1 id="months">00</h1>
+                </div>
+                <div id="age-card">
+                    <h1 id="days">00</h1>
+                </div>
+                <div id="age-card">
+                    <h1 id="hours">00</h1>
+                </div>
+                <div id="age-card">
+                    <h1 id="minutes">00</h1>
+                </div>
+                <div id="age-card">
+                    <h1 id="seconds">00</h1>
+                </div>
+                <h1 class="age-txt">Years</h1>
+                <h1 class="age-txt">Months</h1>
+                <h1 class="age-txt">Days</h1>
+                <h1 class="age-txt">Hours</h1>
+                <h1 class="age-txt">Minutes</h1>
+                <h1 class="age-txt">Seconds</h1>
+            </div>
+            <div class="txt-mobile">
+                <h1 class="age-txts">Years</h1>
+                <h1 class="age-txts">Months</h1>
+                <h1 class="age-txts">Days</h1>
+                <h1 class="age-txts">Hours</h1>
+                <h1 class="age-txts">Minutes</h1>
+                <h1 class="age-txts">Seconds</h1>
+            </div>
+        </div>
+        <div class="age-div age-div-bot">
+            <h1 class="age-txt-head age-txt-body">Old</h1>
+        </div>
+    </div>
+<br><br>
+
+
+    <!-- <div class="age-div projects-txt"><h1 class="age-txt-head projects-banner">Projects</h1></div> -->
+    <div class="projects" id="projects">
+
+        <div class="project-card">
+            <div class="project-card-surface">
+                <h1 class="project-title">SJ Trainer</h1>
+                <h3 class="project-desc">SJ Trainer is a free, ad-free chess training tool that offers users positions from real games for practice. Unlike traditional puzzles, it provides unbiased challenges with no preset advantages or disadvantages. Simply visit the website, analyze the position displayed, calculate your move, and enter it.</h3>
+                <button class="project-but"  onclick="launch('https://hirujaedurapola.github.io/SJ-Trainer/')">View</button>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-card-surface">
+                <h1 class="project-title">SJML</h1>
+                <h3 class="project-desc">SJML, is a toolkit designed to enhance web development projects with captivating CSS features. With SJML, developers can effortlessly incorporate stylish elements into their websites, elevating the user experience to new heights.
+
+                    Utilizing the power of CSS, SJML offers a wide range of features and effects, from animations to transitions and beyond. </h3>
+                <button class="project-but"  onclick="launch('https://hirujaedurapola.github.io/SJML/')">View</button>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-card-surface">
+                <h1 class="project-title">Web of Answers</h1>
+                <h3 class="project-desc">Web of Answer is like the Magic 8 Ball. But actually a Magic 400 Web! Test your fortune through your browser with just a click. Visit now and find answers for your Yes and No questions!!!</h3>
+                <button class="project-but"  onclick="launch('`https://hirujaedurapola.github.io/Projects/Web-Of-Answers/')">View</button>
+            </div>
+        </div>
+
+          
+    </div>
+
+    <!-- <div class="contact-me" id="contact">
+        <h1>Contact Card</h1><br>
+       <div class="h1">
+        Name: Hiruja Edurapola<br>
+        Age: 14<br>
+        Location: Panadura, Sri Lanka<br>
+        Email: videohiruja@gmail.com<br>
+        Phone: 0718869216<br>
+        Website: <a href="#">hirujaedurapola.github.io</a>
+       </div>
+      </div>
+    -->
+    <script src="./js/app.js"></script>
+    <script src="./js/lang.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

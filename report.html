@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Card - Hiruja Edurapola</title>
+    <link rel="stylesheet" href="css/rc-sj.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="./img/sj.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- <div class="nav" style="animation-duration: 2s; max-height: 2vh; font-size: smaller;">
+        <h1 class="nav-item-hiruja" style="font-size: 0.4rem;"><a href="#">Hiruja Edurapola</a></h1>
+        <div class="nav-box">
+            <h1 class="nav-item"><a href="#">Home</a></h1>
+            <h1 class="nav-item"><a href="#projects">Projects</a></h1>
+            <h1 class="nav-item"><a href="./report.html">Academics</a></h1>
+            <h1 class="nav-item"><a href="#contact">Contact</a></h1>
+        </div>
+    </div> -->
+    <a href="https://hirujaedurapola.github.io"><img src="./img/back.svg" alt="Back"></a>
+    <div class="container">
+        <div class="config">
+            <!-- <select name="" id="year-select">
+                <option value="2024" onclick="setYear(2024)">2024</option>
+                <option value="2023" onclick="setYear(2023)">2023</option>
+                <option value="2022" onclick="setYear(2022)">2022</option>
+                <option value="2021" onclick="setYear(2021)">2021</option>
+            </select>
+            <select name="" id="term-select">
+                <option value="3" onclick="setTerm(3)">Third Term</option>
+                <option value="2" onclick="setYear(2)">Second Term</option>
+                <option value="1" onclick="setYear(1)">First Term</option>
+            </select> -->
+            <div class="year-selection">
+                <div class="year" onclick="setYear(2024)" id="ttf">2024</div>
+                <div class="year" onclick="setYear(2023)" id="ttt">2023</div>
+                <div class="year" onclick="setYear(2022)" id="ttw">2022</div>
+                <div class="year" onclick="setYear(2021)" id="tto">2021</div>
+            </div>
+            <div class="term-selection">
+                <div class="term" onclick="setTerm(1)" id="t1">First Term</div>
+                <div class="term" onclick="setTerm(2)" id="t2">Second Term</div>
+                <div class="term" onclick="setTerm(3)" id="t3">Third Term</div>
+            </div>
+        </div>
+        <div class="main-grid">
+            <div class="grid">
+                <div class="data-names">
+                    <div class="data-item">Religion</div>
+                    <div class="data-item">Sinhala</div>
+                    <div class="data-item">English</div>
+                    <div class="data-item">Maths</div>
+                    <div class="data-item">Science</div>
+                    <div class="data-item">History</div>
+                    <div class="data-item">Geography</div>
+                    <div class="data-item">Civics</div>
+                    <div class="data-item">Tamil</div>
+                    <div class="data-item">Drama</div>
+                    <div class="data-item">PTS</div>
+                    <div class="data-item">Health</div>
+                </div>
+                <div class="values">
+                    <div class="value-items" id="marks-rel">100</div>
+                    <div class="value-items" id="marks-sin">99</div>
+                    <div class="value-items" id="marks-eng">99</div>
+                    <div class="value-items" id="marks-math">99</div>
+                    <div class="value-items" id="marks-sci">99</div>
+                    <div class="value-items" id="marks-his">99</div>
+                    <div class="value-items" id="marks-geo">99</div>
+                    <div class="value-items" id="marks-ls">99</div>
+                    <div class="value-items" id="marks-tam">99</div>
+                    <div class="value-items" id="marks-es">99</div>
+                    <div class="value-items" id="marks-pts">99</div>
+                    <div class="value-items" id="marks-hs">99</div>
+                </div>
+            </div>
+        
+        <div class="statics">
+            <div class="data-names-stats">
+                <div class="data-item-stats">Total <span id="tot">999</span></div>
+                <div class="data-item-stats">Average: <span id="avg">99.8%</span></div>
+                <div class="data-item-stats">Class Wise Place: <span id="pc">01</span></div>
+                <div class="data-item-stats" title="Place taken among the students of the same medium (English Medium)">Medium Wise Place: <span id="pm">01</span></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="./js/rc-sj.js"></script>
+</body>
+
+</html>

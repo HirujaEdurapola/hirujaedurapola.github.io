@@ -1,0 +1,156 @@
+@font-face {
+    font-family: 'JetBrains-Mono';
+    src: url("../fonts/JetBrainsMono[wght].ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'JetBrains-Mono', monospace;
+    background-color: black;
+    color: white;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* width: 65vw; */
+    gap: 1vw;
+}
+
+.main-img{
+    height: 70%;
+    width: min-content;
+}
+
+.small-grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 20vw;
+}
+
+.main-text{
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 20%;
+}
+
+.secondary-text{
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.img-grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1290px) {
+    .small-grid{
+        width: 22vw;
+    }
+    .main-text{
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 950px) {
+    .main-grid{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .main-img{
+        height: 45vh;
+        width: auto;
+    }
+
+    .small-grid{
+        width: 35vw;
+    }
+
+    .main-text{
+        font-size: 3rem;
+        margin-bottom: 15%;
+    }
+
+    .secondary-text{
+        font-size: 1.4rem;
+        width: 120%;
+    }
+}
+
+@media (max-width: 740px) {
+    .main-grid{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .main-img{
+        height: 45vh;
+        width: auto;
+    }
+
+    .small-grid{
+        width: 40%;
+        text-align: center;
+    }
+
+    .main-text{
+        font-size: 3rem;
+        margin-bottom: 15%;
+        width: 150%;
+    }
+
+    .secondary-text{
+        font-size: 1.3rem;
+        /* width: 50%; */
+    }
+}
+
+@media (max-width: 600px) {
+    .main-grid{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .main-img{
+        height: 35vh;
+        width: auto;
+    }
+
+    .small-grid{
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-text{
+        font-size: 3rem;
+        margin-bottom: 10%;
+        width: 100%;
+    }
+
+    .secondary-text{
+        font-size: 1.3rem;
+        /* width: 50%; */
+        width: 60%;
+        padding: 0;
+        height: fit-content;
+    }
+}

@@ -1,0 +1,9 @@
+menu:
+  - text: "Home"
+    path: "Home"
+  - text: "About Me"
+    path: "About"
+  - text: "Speedcuber"
+    path: "cubing"
+  - text: "Astronomer"
+    path: "astronomy"
