@@ -1,0 +1,60 @@
+[ERRO] 2025/05/29 12:37 favicon: file or directory D:\Hiruja\Codes\Portfolio\diary\favicon.ico not found: %!w(*fs.PathError=&{open D:\Hiruja\Codes\Portfolio\diary\favicon.ico 2})
+Iris Version: 12.2.0-beta2
+
+Now listening on: http://localhost:5006
+Application started. Press CTRL+C to shut down.
+2025-05-29 12:39:08|111.0008ms|200|GET|/|127.0.0.1|0 B|0 B||
+2025-05-29 12:39:08|111.0008ms|200|GET|/|127.0.0.1|0 B|0 B||
+2025-05-29 12:39:08|713.9µs|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-29 12:39:08|713.9µs|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-29 12:39:11|33.1117ms|200|GET|/03 Coding|127.0.0.1|f=03 Coding|0 B|0 B||
+2025-05-29 12:39:11|33.1117ms|200|GET|/03 Coding|127.0.0.1|f=03 Coding|0 B|0 B||
+[ERRO] 2025/05/29 12:39 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/IMG-2022.png.md', Path is /IMG-2022.png
+2025-05-29 12:39:11|1.1423ms|404|GET|/IMG-2022.png|127.0.0.1|0 B|0 B||
+2025-05-29 12:39:11|1.1423ms|404|GET|/IMG-2022.png|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/29 12:39 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/Path.md', Path is /Path
+2025-05-29 12:39:11|1.111ms|404|GET|/Path|127.0.0.1|0 B|0 B||
+2025-05-29 12:39:11|1.111ms|404|GET|/Path|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/29 12:39 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/img----.md', Path is /img----
+2025-05-29 12:39:11|3.9628ms|404|GET|/img----|127.0.0.1|0 B|0 B||
+2025-05-29 12:39:11|3.9628ms|404|GET|/img----|127.0.0.1|0 B|0 B||
+2025-05-29 12:39:11|0s|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-29 12:39:11|0s|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-29 15:15:37|278.1654ms|200|GET|/static/css/github-markdown-css/white.css|127.0.0.1|file=css/github-markdown-css/white.css|0 B|10 B||
+2025-05-29 15:15:37|278.1654ms|200|GET|/static/css/github-markdown-css/white.css|127.0.0.1|file=css/github-markdown-css/white.css|0 B|10 B||
+[ERRO] 2025/05/29 20:56 favicon: file or directory D:\Hiruja\Codes\Portfolio\diary\favicon.ico not found: %!w(*fs.PathError=&{open D:\Hiruja\Codes\Portfolio\diary\favicon.ico 2})
+Iris Version: 12.2.0-beta2
+
+Now listening on: http://localhost:5006
+Application started. Press CTRL+C to shut down.
+[ERRO] 2025/05/29 20:57 favicon: file or directory D:\Hiruja\Codes\Portfolio\diary\favicon.ico not found: %!w(*fs.PathError=&{open D:\Hiruja\Codes\Portfolio\diary\favicon.ico 2})
+Iris Version: 12.2.0-beta2
+
+Now listening on: http://localhost:5006
+Application started. Press CTRL+C to shut down.
+2025-05-29 20:59:24|192.4457ms|200|GET|/03 Coding|127.0.0.1|f=03 Coding|0 B|0 B||
+2025-05-29 20:59:24|192.4457ms|200|GET|/03 Coding|127.0.0.1|f=03 Coding|0 B|0 B||
+[ERRO] 2025/05/29 20:59 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/SCI_22.jpg.md', Path is /SCI_22.jpg
+2025-05-29 20:59:24|821.6µs|404|GET|/SCI_22.jpg|127.0.0.1|0 B|0 B||
+2025-05-29 20:59:24|821.6µs|404|GET|/SCI_22.jpg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/29 20:59 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/SCI_24.jpg.md', Path is /SCI_24.jpg
+2025-05-29 20:59:24|1.8213ms|404|GET|/SCI_24.jpg|127.0.0.1|0 B|0 B||
+2025-05-29 20:59:24|1.8213ms|404|GET|/SCI_24.jpg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/29 20:59 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/PWC_ICT_24.jpg.md', Path is /PWC_ICT_24.jpg
+2025-05-29 20:59:24|999.3µs|404|GET|/PWC_ICT_24.jpg|127.0.0.1|0 B|0 B||
+2025-05-29 20:59:24|999.3µs|404|GET|/PWC_ICT_24.jpg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/29 20:59 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/RCC_ICT_24.jpg.md', Path is /RCC_ICT_24.jpg
+2025-05-29 20:59:24|515.5µs|404|GET|/RCC_ICT_24.jpg|127.0.0.1|0 B|0 B||
+2025-05-29 20:59:24|515.5µs|404|GET|/RCC_ICT_24.jpg|127.0.0.1|0 B|0 B||
+2025-05-29 20:59:24|0s|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-29 20:59:24|0s|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+[ERRO] 2025/05/29 21:00 favicon: file or directory D:\Hiruja\Codes\Portfolio\diary\favicon.ico not found: %!w(*fs.PathError=&{open D:\Hiruja\Codes\Portfolio\diary\favicon.ico 2})
+Iris Version: 12.2.0-beta2
+
+Now listening on: http://localhost:5006
+Application started. Press CTRL+C to shut down.
+[ERRO] 2025/05/29 21:02 favicon: file or directory D:\Hiruja\Codes\Portfolio\diary\favicon.ico not found: %!w(*fs.PathError=&{open D:\Hiruja\Codes\Portfolio\diary\favicon.ico 2})
+Iris Version: 12.2.0-beta2
+
+Now listening on: http://localhost:5006
+Application started. Press CTRL+C to shut down.
