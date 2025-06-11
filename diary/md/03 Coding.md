@@ -38,17 +38,24 @@ One of the first major projects that I can remember was made in 2019 when I was 
 <br><br>
 In 2022, after the lockdown, I presented my Smart Dustbin Concept at the school's science exhibition. A dustbin controlled with an Arduino controller with an ultrasonic sensor and a servo motor which can detect if there is a human in front of it and automatically open/close the lid.
 
-![SCI_Exibit_22](./IMG-2022.png)  
+![Hiruja Edurapola at the Sri Sumangala College Science Exhibiton 2022](./SCI_22.jpeg)  
 <br><br>
 Later in 2024, I again presented my Parental Control app at the school's science exhibition. A Python app which periodically takes screenshots of the child's computer screen, so parents can see what their children are up to. This is the time I learned and experimented with Python libraries like Flask and this is when I learned how Python can be used for backend web development.
 
-![SCI_EXhbiti_24](./img----)  
+![Hiruja Edurapola at the Sri Sumangala College Science Exhibiton 2024](./SCI_24.jpeg)  
 <br><br>
 In 2024 I participated in an inter-school programming competition held by Prince of Wales College Moratuwa. I won the first place in the Python programming category. This was my first noticeable win in the programming section (not web development).
 
-![IMG](Path)  
+![Hiruja Edurapola at the ICT Day of Prince of Wales College 2024](PWC_ICT_24.jpeg)  
 <br><br>
 Also in late 2024, I participated in a web development competition held by Royal College - Colombo. I also won the first place in the junior category. This is the time I learned about React and complex web animation technologies. As a component for the web design here, I also came up with a concept of a day-night cycle in HTML using Apple's dynamic wallpaper/image files (.heic).  
-![IMG](Path)  
+
+![Hiruja Edurapola at the ICT Day of Royal College 2024](./RCC_ICT_24.jpg)  
 <br><br>
 Apart from those, most of my projects are listed in my GitHub profile and some are also in the end of this article.
+
+| Project | Description | Technologies
+------------|-----------|--------------
+|  Hello    | World     | !!
+
+

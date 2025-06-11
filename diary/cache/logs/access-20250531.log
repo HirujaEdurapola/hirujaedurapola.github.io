@@ -1,0 +1,288 @@
+[ERRO] 2025/05/31 20:49 favicon: file or directory D:\Hiruja\Codes\Portfolio\diary\favicon.ico not found: %!w(*fs.PathError=&{open D:\Hiruja\Codes\Portfolio\diary\favicon.ico 2})
+Iris Version: 12.2.0-beta2
+
+Now listening on: http://localhost:5006
+Application started. Press CTRL+C to shut down.
+2025-05-31 20:50:44|17.8339ms|200|GET|/03 Coding|127.0.0.1|f=03 Coding|0 B|0 B||
+2025-05-31 20:50:44|17.8339ms|200|GET|/03 Coding|127.0.0.1|f=03 Coding|0 B|0 B||
+[ERRO] 2025/05/31 20:50 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/SCI_22.jpeg.md', Path is /SCI_22.jpeg
+[ERRO] 2025/05/31 20:50 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/SCI_24.jpeg.md', Path is /SCI_24.jpeg
+2025-05-31 20:50:44|483µs|404|GET|/SCI_22.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:50:44|483µs|404|GET|/SCI_22.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:50:44|0s|404|GET|/SCI_24.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:50:44|0s|404|GET|/SCI_24.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:50 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/PWC_ICT_24.jpeg.md', Path is /PWC_ICT_24.jpeg
+[ERRO] 2025/05/31 20:50 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/RCC_ICT_24.jpg.md', Path is /RCC_ICT_24.jpg
+2025-05-31 20:50:44|318.7µs|404|GET|/PWC_ICT_24.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:50:44|318.7µs|404|GET|/PWC_ICT_24.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:50:44|0s|404|GET|/RCC_ICT_24.jpg|127.0.0.1|0 B|0 B||
+2025-05-31 20:50:44|0s|404|GET|/RCC_ICT_24.jpg|127.0.0.1|0 B|0 B||
+2025-05-31 20:50:45|842.8µs|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-31 20:50:45|842.8µs|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-31 20:50:50|42.3781ms|200|GET|/01 Home|127.0.0.1|f=01 Home|0 B|0 B||
+2025-05-31 20:50:50|42.3781ms|200|GET|/01 Home|127.0.0.1|f=01 Home|0 B|0 B||
+2025-05-31 20:50:50|480.5µs|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-31 20:50:50|480.5µs|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-31 20:50:54|4.4538ms|200|GET|/|127.0.0.1|0 B|0 B||
+2025-05-31 20:50:54|4.4538ms|200|GET|/|127.0.0.1|0 B|0 B||
+2025-05-31 20:50:54|375.7µs|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-31 20:50:54|375.7µs|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-31 20:53:45|521.7µs|200|GET|/|127.0.0.1|0 B|3.2 KB||
+2025-05-31 20:53:45|521.7µs|200|GET|/|127.0.0.1|0 B|3.2 KB||
+[ERRO] 2025/05/31 20:53 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/robots.txt.md', Path is /robots.txt
+2025-05-31 20:53:45|927.1µs|404|GET|/robots.txt|127.0.0.1|0 B|0 B||
+2025-05-31 20:53:45|927.1µs|404|GET|/robots.txt|127.0.0.1|0 B|0 B||
+2025-05-31 20:53:45|106.0926ms|200|GET|/static/css/github-markdown-css/dark.css|127.0.0.1|file=css/github-markdown-css/dark.css|0 B|10 B||
+2025-05-31 20:53:45|106.0926ms|200|GET|/static/css/github-markdown-css/dark.css|127.0.0.1|file=css/github-markdown-css/dark.css|0 B|10 B||
+2025-05-31 20:53:46|3.4165ms|200|GET|/static/css/gitbook-theme/style.css|127.0.0.1|file=css/gitbook-theme/style.css|0 B|10 B||
+2025-05-31 20:53:46|3.4165ms|200|GET|/static/css/gitbook-theme/style.css|127.0.0.1|file=css/gitbook-theme/style.css|0 B|10 B||
+2025-05-31 20:53:46|626.4µs|200|GET|/static/css/gitbook-theme/website.css|127.0.0.1|file=css/gitbook-theme/website.css|0 B|10 B||
+2025-05-31 20:53:46|626.4µs|200|GET|/static/css/gitbook-theme/website.css|127.0.0.1|file=css/gitbook-theme/website.css|0 B|10 B||
+2025-05-31 20:53:46|1.0034ms|200|GET|/static/css/gitbook-theme/chapter-fold.css|127.0.0.1|file=css/gitbook-theme/chapter-fold.css|0 B|10 B||
+2025-05-31 20:53:46|1.0034ms|200|GET|/static/css/gitbook-theme/chapter-fold.css|127.0.0.1|file=css/gitbook-theme/chapter-fold.css|0 B|10 B||
+2025-05-31 20:53:46|504.5µs|200|GET|/static/css/gitbook-theme/splitter.css|127.0.0.1|file=css/gitbook-theme/splitter.css|0 B|10 B||
+2025-05-31 20:53:46|504.5µs|200|GET|/static/css/gitbook-theme/splitter.css|127.0.0.1|file=css/gitbook-theme/splitter.css|0 B|10 B||
+2025-05-31 20:53:47|1.3848ms|200|GET|/static/css/highlight-theme/a11y-dark.css|127.0.0.1|file=css/highlight-theme/a11y-dark.css|0 B|10 B||
+2025-05-31 20:53:47|1.3848ms|200|GET|/static/css/highlight-theme/a11y-dark.css|127.0.0.1|file=css/highlight-theme/a11y-dark.css|0 B|10 B||
+2025-05-31 20:53:47|1.1993ms|200|GET|/static/css/main.css|127.0.0.1|file=css/main.css|0 B|10 B||
+2025-05-31 20:53:47|1.1993ms|200|GET|/static/css/main.css|127.0.0.1|file=css/main.css|0 B|10 B||
+2025-05-31 20:53:47|0s|200|GET|/01 Home|127.0.0.1|f=01 Home|0 B|3.2 KB||
+2025-05-31 20:53:47|0s|200|GET|/01 Home|127.0.0.1|f=01 Home|0 B|3.2 KB||
+2025-05-31 20:53:47|11.3869ms|200|GET|/02 About|127.0.0.1|f=02 About|0 B|0 B||
+2025-05-31 20:53:47|11.3869ms|200|GET|/02 About|127.0.0.1|f=02 About|0 B|0 B||
+2025-05-31 20:53:48|3.8446ms|200|GET|/03 Coding|127.0.0.1|f=03 Coding|0 B|0 B||
+2025-05-31 20:53:48|3.8446ms|200|GET|/03 Coding|127.0.0.1|f=03 Coding|0 B|0 B||
+[ERRO] 2025/05/31 20:53 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/chess.md', Path is /chess
+2025-05-31 20:53:48|1.0781ms|404|GET|/chess|127.0.0.1|0 B|0 B||
+2025-05-31 20:53:48|1.0781ms|404|GET|/chess|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:53 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/cubing.md', Path is /cubing
+2025-05-31 20:53:48|0s|404|GET|/cubing|127.0.0.1|0 B|0 B||
+2025-05-31 20:53:48|0s|404|GET|/cubing|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:53 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/astronomy.md', Path is /astronomy
+2025-05-31 20:53:48|510.8µs|404|GET|/astronomy|127.0.0.1|0 B|0 B||
+2025-05-31 20:53:48|510.8µs|404|GET|/astronomy|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:53 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/formulaone.md', Path is /formulaone
+2025-05-31 20:53:48|610.4µs|404|GET|/formulaone|127.0.0.1|0 B|0 B||
+2025-05-31 20:53:48|610.4µs|404|GET|/formulaone|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:53 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/aviation.md', Path is /aviation
+2025-05-31 20:53:49|0s|404|GET|/aviation|127.0.0.1|0 B|0 B||
+2025-05-31 20:53:49|0s|404|GET|/aviation|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:53 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/gaming.md', Path is /gaming
+2025-05-31 20:53:49|0s|404|GET|/gaming|127.0.0.1|0 B|0 B||
+2025-05-31 20:53:49|0s|404|GET|/gaming|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:53 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/photography.md', Path is /photography
+2025-05-31 20:53:49|509.6µs|404|GET|/photography|127.0.0.1|0 B|0 B||
+2025-05-31 20:53:49|509.6µs|404|GET|/photography|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:53 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/editing.md', Path is /editing
+2025-05-31 20:53:49|708.8µs|404|GET|/editing|127.0.0.1|0 B|0 B||
+2025-05-31 20:53:49|708.8µs|404|GET|/editing|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:53 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/graphic.md', Path is /graphic
+2025-05-31 20:53:50|0s|404|GET|/graphic|127.0.0.1|0 B|0 B||
+2025-05-31 20:53:50|0s|404|GET|/graphic|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:53 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/kaijuverse.md', Path is /kaijuverse
+2025-05-31 20:53:50|0s|404|GET|/kaijuverse|127.0.0.1|0 B|0 B||
+2025-05-31 20:53:50|0s|404|GET|/kaijuverse|127.0.0.1|0 B|0 B||
+2025-05-31 20:53:50|64.3701ms|200|GET|/static/js/highlight.js|127.0.0.1|file=js/highlight.js|0 B|33.6 KB||
+2025-05-31 20:53:50|64.3701ms|200|GET|/static/js/highlight.js|127.0.0.1|file=js/highlight.js|0 B|33.6 KB||
+2025-05-31 20:53:50|16.4909ms|200|GET|/static/js/jQuery.js|127.0.0.1|file=js/jQuery.js|0 B|91.8 KB||
+2025-05-31 20:53:50|16.4909ms|200|GET|/static/js/jQuery.js|127.0.0.1|file=js/jQuery.js|0 B|91.8 KB||
+2025-05-31 20:53:50|1.3178ms|200|GET|/static/js/chapter-fold.js|127.0.0.1|file=js/chapter-fold.js|0 B|10 B||
+2025-05-31 20:53:50|1.3178ms|200|GET|/static/js/chapter-fold.js|127.0.0.1|file=js/chapter-fold.js|0 B|10 B||
+2025-05-31 20:53:51|994.6µs|200|GET|/static/js/splitter.js|127.0.0.1|file=js/splitter.js|0 B|10 B||
+2025-05-31 20:53:51|994.6µs|200|GET|/static/js/splitter.js|127.0.0.1|file=js/splitter.js|0 B|10 B||
+2025-05-31 20:53:51|1.1253ms|200|GET|/static/js/main.js|127.0.0.1|file=js/main.js|0 B|10 B||
+2025-05-31 20:53:51|1.1253ms|200|GET|/static/js/main.js|127.0.0.1|file=js/main.js|0 B|10 B||
+2025-05-31 20:53:52|865.9µs|404|GET|/static/css/gitbook-theme/fonts/fontawesome/fontawesome-webfont.eot|127.0.0.1|v=4.6.3|0 B|0 B||
+2025-05-31 20:53:52|865.9µs|404|GET|/static/css/gitbook-theme/fonts/fontawesome/fontawesome-webfont.eot|127.0.0.1|v=4.6.3|0 B|0 B||
+2025-05-31 20:53:52|664µs|404|GET|/static/css/gitbook-theme/fonts/fontawesome/fontawesome-webfont.eot|127.0.0.1|0 B|0 B||
+2025-05-31 20:53:52|664µs|404|GET|/static/css/gitbook-theme/fonts/fontawesome/fontawesome-webfont.eot|127.0.0.1|0 B|0 B||
+2025-05-31 20:53:52|26.9659ms|200|GET|/static/css/gitbook-theme/fonts/fontawesome/fontawesome-webfont.woff2|127.0.0.1|file=css/gitbook-theme/fonts/fontawesome/fontawesome-webfont.woff2 v=4.6.3|0 B|64.0 KB||
+2025-05-31 20:53:52|26.9659ms|200|GET|/static/css/gitbook-theme/fonts/fontawesome/fontawesome-webfont.woff2|127.0.0.1|file=css/gitbook-theme/fonts/fontawesome/fontawesome-webfont.woff2 v=4.6.3|0 B|64.0 KB||
+2025-05-31 20:53:52|822.4µs|404|GET|/static/css/gitbook-theme/fonts/fontawesome/fontawesome-webfont.woff|127.0.0.1|v=4.6.3|0 B|0 B||
+2025-05-31 20:53:52|822.4µs|404|GET|/static/css/gitbook-theme/fonts/fontawesome/fontawesome-webfont.woff|127.0.0.1|v=4.6.3|0 B|0 B||
+2025-05-31 20:53:54|0s|404|GET|/static/css/gitbook-theme/fonts/fontawesome/fontawesome-webfont.ttf|127.0.0.1|v=4.6.3|0 B|0 B||
+2025-05-31 20:53:54|0s|404|GET|/static/css/gitbook-theme/fonts/fontawesome/fontawesome-webfont.ttf|127.0.0.1|v=4.6.3|0 B|0 B||
+2025-05-31 20:53:54|705.2µs|404|GET|/static/css/gitbook-theme/fonts/fontawesome/fontawesome-webfont.svg|127.0.0.1|v=4.6.3|0 B|0 B||
+2025-05-31 20:53:54|705.2µs|404|GET|/static/css/gitbook-theme/fonts/fontawesome/fontawesome-webfont.svg|127.0.0.1|v=4.6.3|0 B|0 B||
+[ERRO] 2025/05/31 20:53 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/SCI_22.jpeg.md', Path is /SCI_22.jpeg
+2025-05-31 20:53:54|30.134ms|404|GET|/SCI_22.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:53:54|30.134ms|404|GET|/SCI_22.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:53 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/SCI_24.jpeg.md', Path is /SCI_24.jpeg
+2025-05-31 20:53:54|597.8µs|404|GET|/SCI_24.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:53:54|597.8µs|404|GET|/SCI_24.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:53 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/PWC_ICT_24.jpeg.md', Path is /PWC_ICT_24.jpeg
+2025-05-31 20:53:55|558.5µs|404|GET|/PWC_ICT_24.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:53:55|558.5µs|404|GET|/PWC_ICT_24.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:53 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/RCC_ICT_24.jpg.md', Path is /RCC_ICT_24.jpg
+2025-05-31 20:53:55|18.2765ms|404|GET|/RCC_ICT_24.jpg|127.0.0.1|0 B|0 B||
+2025-05-31 20:53:55|18.2765ms|404|GET|/RCC_ICT_24.jpg|127.0.0.1|0 B|0 B||
+2025-05-31 20:54:39|865.9µs|200|GET|/03 Coding|127.0.0.1|f=03 Coding|0 B|8.0 KB||
+2025-05-31 20:54:39|865.9µs|200|GET|/03 Coding|127.0.0.1|f=03 Coding|0 B|8.0 KB||
+[ERRO] 2025/05/31 20:54 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/SCI_22.jpeg.md', Path is /SCI_22.jpeg
+2025-05-31 20:54:39|0s|404|GET|/SCI_22.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:54:39|0s|404|GET|/SCI_22.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:54 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/SCI_24.jpeg.md', Path is /SCI_24.jpeg
+2025-05-31 20:54:39|606.5µs|404|GET|/SCI_24.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:54:39|606.5µs|404|GET|/SCI_24.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:54 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/PWC_ICT_24.jpeg.md', Path is /PWC_ICT_24.jpeg
+[ERRO] 2025/05/31 20:54 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/RCC_ICT_24.jpg.md', Path is /RCC_ICT_24.jpg
+2025-05-31 20:54:39|545.6µs|404|GET|/PWC_ICT_24.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:54:39|545.6µs|404|GET|/PWC_ICT_24.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:54:39|545.6µs|404|GET|/RCC_ICT_24.jpg|127.0.0.1|0 B|0 B||
+2025-05-31 20:54:39|545.6µs|404|GET|/RCC_ICT_24.jpg|127.0.0.1|0 B|0 B||
+2025-05-31 20:54:39|1.1672ms|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-31 20:54:39|1.1672ms|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-31 20:54:42|1.0958ms|200|GET|/03 Coding|127.0.0.1|f=03 Coding|0 B|8.0 KB||
+2025-05-31 20:54:42|1.0958ms|200|GET|/03 Coding|127.0.0.1|f=03 Coding|0 B|8.0 KB||
+[ERRO] 2025/05/31 20:54 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/SCI_22.jpeg.md', Path is /SCI_22.jpeg
+2025-05-31 20:54:42|680.9µs|404|GET|/SCI_22.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:54:42|680.9µs|404|GET|/SCI_22.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:54 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/SCI_24.jpeg.md', Path is /SCI_24.jpeg
+2025-05-31 20:54:42|542.5µs|404|GET|/SCI_24.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:54:42|542.5µs|404|GET|/SCI_24.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:54 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/PWC_ICT_24.jpeg.md', Path is /PWC_ICT_24.jpeg
+2025-05-31 20:54:42|542.6µs|404|GET|/PWC_ICT_24.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:54:42|542.6µs|404|GET|/PWC_ICT_24.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:54 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/RCC_ICT_24.jpg.md', Path is /RCC_ICT_24.jpg
+2025-05-31 20:54:42|542.6µs|404|GET|/RCC_ICT_24.jpg|127.0.0.1|0 B|0 B||
+2025-05-31 20:54:42|542.6µs|404|GET|/RCC_ICT_24.jpg|127.0.0.1|0 B|0 B||
+2025-05-31 20:54:42|452.5µs|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-31 20:54:42|452.5µs|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+[ERRO] 2025/05/31 20:55 favicon: file or directory D:\Hiruja\Codes\Portfolio\diary\favicon.ico not found: %!w(*fs.PathError=&{open D:\Hiruja\Codes\Portfolio\diary\favicon.ico 2})
+Iris Version: 12.2.0-beta2
+
+Now listening on: http://localhost:5006
+Application started. Press CTRL+C to shut down.
+2025-05-31 20:55:34|31.7866ms|200|GET|/03 Coding|127.0.0.1|f=03 Coding|0 B|0 B||
+2025-05-31 20:55:34|31.7866ms|200|GET|/03 Coding|127.0.0.1|f=03 Coding|0 B|0 B||
+[ERRO] 2025/05/31 20:55 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/SCI_22.jpeg.md', Path is /SCI_22.jpeg
+2025-05-31 20:55:34|719µs|404|GET|/SCI_22.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:55:34|719µs|404|GET|/SCI_22.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:55 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/SCI_24.jpeg.md', Path is /SCI_24.jpeg
+2025-05-31 20:55:34|541.8µs|404|GET|/SCI_24.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:55:34|541.8µs|404|GET|/SCI_24.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:55 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/PWC_ICT_24.jpeg.md', Path is /PWC_ICT_24.jpeg
+2025-05-31 20:55:34|536.9µs|404|GET|/PWC_ICT_24.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:55:34|536.9µs|404|GET|/PWC_ICT_24.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:55 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/RCC_ICT_24.jpg.md', Path is /RCC_ICT_24.jpg
+2025-05-31 20:55:34|536.9µs|404|GET|/RCC_ICT_24.jpg|127.0.0.1|0 B|0 B||
+2025-05-31 20:55:34|536.9µs|404|GET|/RCC_ICT_24.jpg|127.0.0.1|0 B|0 B||
+2025-05-31 20:55:34|309.5µs|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-31 20:55:34|309.5µs|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-31 20:55:38|400.3µs|200|GET|/03 Coding|127.0.0.1|f=03 Coding|0 B|8.0 KB||
+2025-05-31 20:55:38|400.3µs|200|GET|/03 Coding|127.0.0.1|f=03 Coding|0 B|8.0 KB||
+[ERRO] 2025/05/31 20:55 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/SCI_22.jpeg.md', Path is /SCI_22.jpeg
+2025-05-31 20:55:38|324µs|404|GET|/SCI_22.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:55:38|324µs|404|GET|/SCI_22.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:55 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/SCI_24.jpeg.md', Path is /SCI_24.jpeg
+2025-05-31 20:55:38|537µs|404|GET|/SCI_24.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:55:38|537µs|404|GET|/SCI_24.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:55 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/PWC_ICT_24.jpeg.md', Path is /PWC_ICT_24.jpeg
+2025-05-31 20:55:38|1.0708ms|404|GET|/PWC_ICT_24.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:55:38|1.0708ms|404|GET|/PWC_ICT_24.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:55 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/RCC_ICT_24.jpg.md', Path is /RCC_ICT_24.jpg
+2025-05-31 20:55:38|0s|404|GET|/RCC_ICT_24.jpg|127.0.0.1|0 B|0 B||
+2025-05-31 20:55:38|0s|404|GET|/RCC_ICT_24.jpg|127.0.0.1|0 B|0 B||
+2025-05-31 20:55:38|482.2µs|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-31 20:55:38|482.2µs|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-31 20:55:38|995.1µs|200|GET|/03 Coding|127.0.0.1|f=03 Coding|0 B|8.0 KB||
+2025-05-31 20:55:38|995.1µs|200|GET|/03 Coding|127.0.0.1|f=03 Coding|0 B|8.0 KB||
+[ERRO] 2025/05/31 20:55 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/SCI_22.jpeg.md', Path is /SCI_22.jpeg
+2025-05-31 20:55:38|937.2µs|404|GET|/SCI_22.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:55:38|937.2µs|404|GET|/SCI_22.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:55 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/SCI_24.jpeg.md', Path is /SCI_24.jpeg
+2025-05-31 20:55:38|668.3µs|404|GET|/SCI_24.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:55:38|668.3µs|404|GET|/SCI_24.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:55 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/PWC_ICT_24.jpeg.md', Path is /PWC_ICT_24.jpeg
+2025-05-31 20:55:38|1.7599ms|404|GET|/PWC_ICT_24.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:55:38|1.7599ms|404|GET|/PWC_ICT_24.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:55 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/RCC_ICT_24.jpg.md', Path is /RCC_ICT_24.jpg
+2025-05-31 20:55:38|3.4967ms|404|GET|/RCC_ICT_24.jpg|127.0.0.1|0 B|0 B||
+2025-05-31 20:55:38|3.4967ms|404|GET|/RCC_ICT_24.jpg|127.0.0.1|0 B|0 B||
+2025-05-31 20:55:38|919.2µs|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-31 20:55:38|919.2µs|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+[ERRO] 2025/05/31 20:58 favicon: file or directory D:\Hiruja\Codes\Portfolio\diary\favicon.ico not found: %!w(*fs.PathError=&{open D:\Hiruja\Codes\Portfolio\diary\favicon.ico 2})
+Iris Version: 12.2.0-beta2
+
+Now listening on: http://localhost:5006
+Application started. Press CTRL+C to shut down.
+2025-05-31 20:58:43|5.109ms|200|GET|/03 Coding|127.0.0.1|f=03 Coding|0 B|0 B||
+2025-05-31 20:58:43|5.109ms|200|GET|/03 Coding|127.0.0.1|f=03 Coding|0 B|0 B||
+[ERRO] 2025/05/31 20:58 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/SCI_22.jpeg.md', Path is /SCI_22.jpeg
+2025-05-31 20:58:43|303.6µs|404|GET|/SCI_22.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:58:43|303.6µs|404|GET|/SCI_22.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:58 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/SCI_24.jpeg.md', Path is /SCI_24.jpeg
+2025-05-31 20:58:43|544.9µs|404|GET|/SCI_24.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:58:43|544.9µs|404|GET|/SCI_24.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:58 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/PWC_ICT_24.jpeg.md', Path is /PWC_ICT_24.jpeg
+2025-05-31 20:58:43|551.1µs|404|GET|/PWC_ICT_24.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:58:43|551.1µs|404|GET|/PWC_ICT_24.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:58 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/RCC_ICT_24.jpg.md', Path is /RCC_ICT_24.jpg
+2025-05-31 20:58:43|551.1µs|404|GET|/RCC_ICT_24.jpg|127.0.0.1|0 B|0 B||
+2025-05-31 20:58:43|551.1µs|404|GET|/RCC_ICT_24.jpg|127.0.0.1|0 B|0 B||
+2025-05-31 20:58:43|541.1µs|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-31 20:58:43|541.1µs|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+[ERRO] 2025/05/31 20:58 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/SCI_22.jpeg.md', Path is /SCI_22.jpeg
+2025-05-31 20:58:48|615.7µs|404|GET|/SCI_22.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:58:48|615.7µs|404|GET|/SCI_22.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 20:58 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/SCI_22.jpeg.md', Path is /SCI_22.jpeg
+2025-05-31 20:58:50|1.1339ms|404|GET|/SCI_22.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:58:50|1.1339ms|404|GET|/SCI_22.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 20:58:50|0s|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-31 20:58:50|0s|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+[ERRO] 2025/05/31 21:00 favicon: file or directory D:\Hiruja\Codes\Portfolio\diary\favicon.ico not found: %!w(*fs.PathError=&{open D:\Hiruja\Codes\Portfolio\diary\favicon.ico 2})
+Iris Version: 12.2.0-beta2
+
+Now listening on: http://localhost:5006
+Application started. Press CTRL+C to shut down.
+2025-05-31 21:00:15|3.6526ms|200|GET|/03 Coding|127.0.0.1|f=03 Coding|0 B|0 B||
+2025-05-31 21:00:15|3.6526ms|200|GET|/03 Coding|127.0.0.1|f=03 Coding|0 B|0 B||
+[ERRO] 2025/05/31 21:00 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/SCI_22.jpeg.md', Path is /SCI_22.jpeg
+2025-05-31 21:00:15|1.0002ms|404|GET|/SCI_22.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 21:00:15|1.0002ms|404|GET|/SCI_22.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 21:00 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/SCI_24.jpeg.md', Path is /SCI_24.jpeg
+2025-05-31 21:00:15|1.2477ms|404|GET|/SCI_24.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 21:00:15|1.2477ms|404|GET|/SCI_24.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 21:00 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/PWC_ICT_24.jpeg.md', Path is /PWC_ICT_24.jpeg
+2025-05-31 21:00:15|695.7µs|404|GET|/PWC_ICT_24.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 21:00:15|695.7µs|404|GET|/PWC_ICT_24.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 21:00 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/RCC_ICT_24.jpg.md', Path is /RCC_ICT_24.jpg
+2025-05-31 21:00:15|1.2507ms|404|GET|/RCC_ICT_24.jpg|127.0.0.1|0 B|0 B||
+2025-05-31 21:00:15|1.2507ms|404|GET|/RCC_ICT_24.jpg|127.0.0.1|0 B|0 B||
+2025-05-31 21:00:16|358.6µs|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-31 21:00:16|358.6µs|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-31 21:00:26|0s|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-31 21:00:26|0s|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+[ERRO] 2025/05/31 21:01 favicon: file or directory D:\Hiruja\Codes\Portfolio\diary\favicon.ico not found: %!w(*fs.PathError=&{open D:\Hiruja\Codes\Portfolio\diary\favicon.ico 2})
+Iris Version: 12.2.0-beta2
+
+Now listening on: http://localhost:5006
+Application started. Press CTRL+C to shut down.
+2025-05-31 21:01:25|4.1017ms|200|GET|/03 Coding|127.0.0.1|f=03 Coding|0 B|0 B||
+2025-05-31 21:01:25|4.1017ms|200|GET|/03 Coding|127.0.0.1|f=03 Coding|0 B|0 B||
+[ERRO] 2025/05/31 21:01 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/SCI_22.jpeg.md', Path is /SCI_22.jpeg
+2025-05-31 21:01:25|1.0028ms|404|GET|/SCI_22.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 21:01:25|1.0028ms|404|GET|/SCI_22.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 21:01 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/SCI_24.jpeg.md', Path is /SCI_24.jpeg
+2025-05-31 21:01:25|742.5µs|404|GET|/SCI_24.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 21:01:25|742.5µs|404|GET|/SCI_24.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 21:01 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/PWC_ICT_24.jpeg.md', Path is /PWC_ICT_24.jpeg
+2025-05-31 21:01:25|323.4µs|404|GET|/PWC_ICT_24.jpeg|127.0.0.1|0 B|0 B||
+2025-05-31 21:01:25|323.4µs|404|GET|/PWC_ICT_24.jpeg|127.0.0.1|0 B|0 B||
+[ERRO] 2025/05/31 21:01 Not Found 'D:\Hiruja\Codes\Portfolio\diary\md/RCC_ICT_24.jpg.md', Path is /RCC_ICT_24.jpg
+2025-05-31 21:01:25|1.0882ms|404|GET|/RCC_ICT_24.jpg|127.0.0.1|0 B|0 B||
+2025-05-31 21:01:25|1.0882ms|404|GET|/RCC_ICT_24.jpg|127.0.0.1|0 B|0 B||
+2025-05-31 21:01:25|0s|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-31 21:01:25|0s|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-31 22:18:55|286.2383ms|200|GET|/01 Home|127.0.0.1|f=01 Home|0 B|0 B||
+2025-05-31 22:18:55|286.2383ms|200|GET|/01 Home|127.0.0.1|f=01 Home|0 B|0 B||
+2025-05-31 22:18:56|1.0617ms|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-31 22:18:56|1.0617ms|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-31 22:18:56|3.1761ms|200|GET|/02 About|127.0.0.1|f=02 About|0 B|0 B||
+2025-05-31 22:18:56|3.1761ms|200|GET|/02 About|127.0.0.1|f=02 About|0 B|0 B||
+2025-05-31 22:18:57|531.3µs|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-05-31 22:18:57|531.3µs|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-06-01 15:12:38|2.730923s|200|GET|/02 About|127.0.0.1|f=02 About|0 B|0 B||
+2025-06-01 15:12:38|2.730923s|200|GET|/02 About|127.0.0.1|f=02 About|0 B|0 B||
+2025-06-01 15:12:39|0s|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
+2025-06-01 15:12:39|0s|200|GET|/favicon.ico|127.0.0.1|f=favicon.ico|0 B|0 B||
