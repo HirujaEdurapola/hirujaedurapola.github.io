@@ -596,11 +596,23 @@ code{
     margin: 1vh;
 }
 
+.project-card:nth-child(1){
+    background-image: url("../img/skyora.jpg");
+}
+
 .project-card:nth-child(2){
-    background-image: url("../img/sjml.jpg");
+    background-image: url("../img/studysync.jpg");
 }
 
 .project-card:nth-child(3){
+    background-image: url("../img/sneak.png");
+}
+
+.project-card:nth-child(5){
+    background-image: url("../img/sjml.jpg");
+}
+
+.project-card:nth-child(6){
     background-image: url("../img/woa.jpeg");
 }
 
