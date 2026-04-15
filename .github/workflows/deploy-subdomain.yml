@@ -2,9 +2,12 @@ name: Deploy Subdomain
 on:
   push:
     branches:
-      - main  # Runs every time you push to main
+      - main
     paths:
-      - 'link/**' # Only runs if you change something in the /link folder
+      - 'link/**'
+
+permissions:
+  contents: write # <--- Add this block
 
 jobs:
   deploy:
@@ -16,5 +19,6 @@ jobs:
       - name: Deploy to Subdomain Branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: link # The folder you want to deploy
-          branch: gh-pages-link # The temporary branch it will create
+          folder: link
+          branch: gh-pages-link
+          token: ${{ secrets.GITHUB_TOKEN }} # <--- Ensure this is included
