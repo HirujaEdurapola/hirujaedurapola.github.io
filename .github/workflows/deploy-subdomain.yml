@@ -1,0 +1,20 @@
+name: Deploy Subdomain
+on:
+  push:
+    branches:
+      - main  # Runs every time you push to main
+    paths:
+      - 'link/**' # Only runs if you change something in the /link folder
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to Subdomain Branch
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: link # The folder you want to deploy
+          branch: gh-pages-link # The temporary branch it will create
