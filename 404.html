@@ -18,49 +18,43 @@
         </div>
     </div>
     
-    <script>
-        // Grab the text elements so we can change them dynamically
-        const errorTxt = document.getElementById("errorTxt");
-        const secondaryTxt = document.getElementById("secondaryTxt");
-        
-        // Grab the path the user typed (e.g., "yt")
-        const path = window.location.pathname.substring(1).toLowerCase();
+ <script>
+    const errorTxt = document.getElementById("errorTxt");
+    const secondaryTxt = document.getElementById("secondaryTxt");
+    const path = window.location.pathname.substring(1).toLowerCase();
 
-        // Function to revert the page back to a standard 404 look
-        function show404() {
-            document.title = "404 - Hiruja Edurapola";
-            errorTxt.innerText = "Error 404";
-            secondaryTxt.innerText = "Sorry, the page you were looking for doesn't exist. Make sure the entered URL is correct.";
-        }
+    function show404() {
+        document.title = "404 - Hiruja Edurapola";
+        errorTxt.innerText = "Error 404";
+        secondaryTxt.innerText = "Sorry, the page you were looking for doesn't exist.";
+    }
 
-        // If there is a path after the slash, check the database
-        if (path) {
-            fetch('https://hirujaedurapola.com/API/links.json')
-                .then(response => {
-                    if (!response.ok) throw new Error('Network response was not ok');
-                    return response.json();
-                })
-                .then(data => {
-                    // Check if the path matches any "param" in your JSON
-                    const match = data.links.find(link => link.param === path);
-                    
-                    if (match) {
-                        // Match found! Redirect seamlessly.
-                        window.location.replace(match.url);
-                    } else {
-                        // No match found in database. It's a real 404 error.
-                        show404();
-                    }
-                })
-                .catch(error => {
-                    console.error('Error fetching the links database:', error);
-                    // If the JSON is missing or cors fails, fallback to standard 404
+    if (path) {
+        // 1. Create a script element to load the "database"
+        const script = document.createElement('script');
+        script.src = 'https://hirujaedurapola.com/API/links.js';
+
+        // 2. Once the script finishes loading...
+        script.onload = function() {
+            const data = window.myLinkDatabase;
+            if (data && data.links) {
+                const match = data.links.find(link => link.param === path);
+                if (match) {
+                    window.location.replace(match.url);
+                } else {
                     show404();
-                });
-        } else {
-            // No path provided, just show the 404
-            show404();
-        }
-    </script>
+                }
+            }
+        };
+
+        // 3. Handle errors (like if the file is missing)
+        script.onerror = show404;
+
+        // Add to page to trigger the download
+        document.head.appendChild(script);
+    } else {
+        show404();
+    }
+</script>
 </body>
 </html>

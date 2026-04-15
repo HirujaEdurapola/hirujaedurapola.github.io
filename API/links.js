@@ -1,12 +1,13 @@
-{
+// Wrap your data in a variable
+window.myLinkDatabase = {
   "links": [
     { 
       "param": "portfolio",
-      "url": "https://www.linkedin.com/in/hiruja-edurapola-72b6b8341/"
+      "url": "https://linkedin.com/in/hirujaedurapola"
     },
     { 
       "param": "yt",
       "url": "https://youtube.com/@hirujasj"
     }
   ]
-}
+};
