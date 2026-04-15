@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Hiruja Edurapola</title>
+    <title>Redirecting - Hiruja Edurapola</title>
     <link rel="stylesheet" href="https://www.hirujaedurapola.com/css/404.css">
     <link rel="shortcut icon" href="https://www.hirujaedurapola.com/img/sj.png" type="image/x-icon">
 </head>
@@ -13,24 +13,54 @@
             <img src="https://www.hirujaedurapola.com/img/hiruja-404.webp" alt="404-Image" class="main-img">
         </div>
         <div class="small-grid">
-            <h1 class="main-text" id="errorTxt">Error 404</h1>
-            <h3 class="secondary-text">Sorry, the page you were looking for doesn't exist. Make sure the entered URL is correct.</h3>
+            <h1 class="main-text" id="errorTxt">Navigating...</h1>
+            <h3 class="secondary-text" id="secondaryTxt">Finding your destination...</h3>
         </div>
     </div>
-    <!-- <script>
-        const text = document.querySelector("#errorTxt")
-        let i = 0
-       
-        function add(){
-            text.innerHTML = "Error " + i;
+    
+    <script>
+        // Grab the text elements so we can change them dynamically
+        const errorTxt = document.getElementById("errorTxt");
+        const secondaryTxt = document.getElementById("secondaryTxt");
+        
+        // Grab the path the user typed (e.g., "yt")
+        const path = window.location.pathname.substring(1).toLowerCase();
+
+        // Function to revert the page back to a standard 404 look
+        function show404() {
+            document.title = "404 - Hiruja Edurapola";
+            errorTxt.innerText = "Error 404";
+            secondaryTxt.innerText = "Sorry, the page you were looking for doesn't exist. Make sure the entered URL is correct.";
         }
 
-        while (i != 404) {
-            setInterval(() => {
-                i++
-                add()
-            }, 3000);
+        // If there is a path after the slash, check the database
+        if (path) {
+            fetch('https://hirujaedurapola.com/database/links.json')
+                .then(response => {
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    return response.json();
+                })
+                .then(data => {
+                    // Check if the path matches any "param" in your JSON
+                    const match = data.links.find(link => link.param === path);
+                    
+                    if (match) {
+                        // Match found! Redirect seamlessly.
+                        window.location.replace(match.url);
+                    } else {
+                        // No match found in database. It's a real 404 error.
+                        show404();
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching the links database:', error);
+                    // If the JSON is missing or cors fails, fallback to standard 404
+                    show404();
+                });
+        } else {
+            // No path provided, just show the 404
+            show404();
         }
-    </script> -->
+    </script>
 </body>
 </html>
