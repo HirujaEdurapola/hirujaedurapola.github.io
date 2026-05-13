@@ -8,6 +8,10 @@ window.myLinkDatabase = {
     { 
       "param": "yt",
       "url": "https://youtube.com/@hirujasj"
+    },
+    {
+      "param": "clayway-up",
+      "url": "https://drive.google.com/file/d/17NcFfFvucfpRsk32ktg8i6q56Isnav-n/view?usp=sharing"
     }
   ]
 };
