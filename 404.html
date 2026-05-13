@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting - Hiruja Edurapola</title>
+    <title>404 - Hiruja Edurapola</title>
     <link rel="stylesheet" href="https://www.hirujaedurapola.com/css/404.css">
     <link rel="shortcut icon" href="https://www.hirujaedurapola.com/img/sj.png" type="image/x-icon">
 </head>
@@ -13,48 +13,24 @@
             <img src="https://www.hirujaedurapola.com/img/hiruja-404.webp" alt="404-Image" class="main-img">
         </div>
         <div class="small-grid">
-            <h1 class="main-text" id="errorTxt">Navigating...</h1>
-            <h3 class="secondary-text" id="secondaryTxt">Finding your destination...</h3>
+            <h1 class="main-text" id="errorTxt">Error 404</h1>
+            <h3 class="secondary-text">Sorry, the page you were looking for doesn't exist. Make sure the entered URL is correct.</h3>
         </div>
     </div>
-    
- <script>
-    const errorTxt = document.getElementById("errorTxt");
-    const secondaryTxt = document.getElementById("secondaryTxt");
-    const path = window.location.pathname.substring(1).toLowerCase();
+    <!-- <script>
+        const text = document.querySelector("#errorTxt")
+        let i = 0
+       
+        function add(){
+            text.innerHTML = "Error " + i;
+        }
 
-    function show404() {
-        document.title = "404 - Hiruja Edurapola";
-        errorTxt.innerText = "Error 404";
-        secondaryTxt.innerText = "Sorry, the page you were looking for doesn't exist.";
-    }
-
-    if (path) {
-        // 1. Create a script element to load the "database"
-        const script = document.createElement('script');
-        script.src = 'https://hirujaedurapola.com/API/links.js';
-
-        // 2. Once the script finishes loading...
-        script.onload = function() {
-            const data = window.myLinkDatabase;
-            if (data && data.links) {
-                const match = data.links.find(link => link.param === path);
-                if (match) {
-                    window.location.replace(match.url);
-                } else {
-                    show404();
-                }
-            }
-        };
-
-        // 3. Handle errors (like if the file is missing)
-        script.onerror = show404;
-
-        // Add to page to trigger the download
-        document.head.appendChild(script);
-    } else {
-        show404();
-    }
-</script>
+        while (i != 404) {
+            setInterval(() => {
+                i++
+                add()
+            }, 3000);
+        }
+    </script> -->
 </body>
 </html>

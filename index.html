@@ -1,338 +1,863 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hiruja Edurapola</title>
-    <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="https://hirujaedurapola.github.io/SJML/sjml.css"> -->
-    <link rel="stylesheet" href="css/sjml.css">
-    <meta name="description" content="The Official Website of Hiruja Edurapola">
-    <meta name="keywords" content="Hiruja, Edurapola, Hiruja Edurapola, Hiruja Edurapola Website, Hiruja Bathika, HirujaSJ, Sri Sumangala College Panadura">
-    <link rel="shortcut icon" href="./img/sj.png" type="image/x-icon">
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
-    <meta name="google-adsense-account" content="ca-pub-9247616560233485">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SJ — Hiruja Edurapola · Software Engineer & Tech Creator</title>
+<meta name="description" content="Hiruja Edurapola (SJ) — Software Engineer, Web Developer, Astronomy Enthusiast, Photographer, and Game Developer from Sri Lanka.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/main.css">
+<style>
+  a{
+    text-decoration: none;
+    color: unset;
+  }
+</style>
 </head>
-
 <body>
-    <div class="nav" id="primary-nav">
-        <h1 class="nav-item-hiruja"><a href="#"><img src="./img/sj.png" alt="Hiruja Memoji" class="nav-icon">Hiruja Edurapola</a></h1>
-        <div class="nav-box">
-            <h1 class="nav-item"><a href="#">Home</a></h1>
-            <h1 class="nav-item"><a href="#projects">Projects</a></h1>
-            <h1 class="nav-item"><a href="./diary/index.html">Blog</a></h1>
-            <h1 class="nav-item"><a href="mailto:videohiruja@gmail.com">Contact</a></h1>
 
-            <nav class="burger">
-                <div class="ham-menu">
-                  <span class="ham-dash"></span>
-                  <span class="ham-dash"></span>
-                  <span class="ham-dash"></span>
-                </div>
-              </nav>
+<!-- CURSORS -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
 
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo"><span>SJ</span> Hiruja</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#photography">Photos</a></li>
+    <li><a href="#design">Design</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
-        </div>
+<!-- HERO -->
+<section id="hero">
+  <canvas id="starfield"></canvas>
 
-    
-
-        <div class="off-screen-menu">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="./diary/index.html">Blog</a></li>
-              <li><a href="mailto:videohiruja@gmail.com">Contact</a></li>
-            </ul>
-          </div>
-
-
-    </div>
-
-    <div class="hello">
-        <img src="./img/Hiruja-Edurapola.png" alt="Hiruja Edurapola" class="hello-img" draggable="false" id="loading-image">
-        <h1 class="hello-text" id="hiruja-loading-text"><span>hello,</span> <span>i'm hiruja</span></h1>
-    </div>
-
-
-    <!-- <div class="run-me">
-        <div class="code-area" value="Hello World" id="code">
-            <code>npx hiruja</code>
-            <img src="./img/copy.svg" alt="Copy" onclick="copyCode('npx hiruja')" class="but-copy" width="1.5vw">
-        </div>
-    </div> -->
-
-
-    <!-- 
-    _______________________________
-        GET TO KNOW ME SECTION
-            05/11 Update
-    _______________________________   
-    -->
-
-    <!-- Interests Section -->
-
-    <div class="interests">
-        <div class="intr-txt">
-            <a href="./diary/coding.html"><h1 class="intr-item"><span class="intr-emoji">🧑🏽‍💻</span> Coder</h1></a>
-            <a href="./diary/chess.html"><h1 class="intr-item"><span class="intr-emoji">♟️</span> Chess Player</h1></a>
-            <a href="./diary/cubing.html"><h1 class="intr-item"><span class="intr-emoji">🔥</span> Speedcuber</h1></a>
-            <a href="./diary/astronomy.html"><h1 class="intr-item"><span class="intr-emoji">🔭</span> Astronomer</h1></a>
-            <a href="./diary/formulaone.html"><h1 class="intr-item"><span class="intr-emoji">🏎️</span> F1 Fan</h1></a>
-            <a href="./diary/aviation.html"><h1 class="intr-item"><span class="intr-emoji">✈️</span> Avgeek</h1></a>
-            <a href="./diary/gaming.html"><h1 class="intr-item"><span class="intr-emoji">🎮</span> Gamer</h1></a>
-            <a href="./diary/photography.html"><h1 class="intr-item"><span class="intr-emoji">📷</span> Photographer</h1></a>
-            <a href="./diary/editing.html"><h1 class="intr-item"><span class="intr-emoji">🎥</span> Video Editor</h1></a>
-            <a href="./diary/graphic.html"><h1 class="intr-item"><span class="intr-emoji">🎨</span> Graphic Designer</h1></a>
-            <a href="./diary/kaiju.html"><h1 class="intr-item"><span class="intr-emoji">🦍</span> Kaiju Fan</h1></a>
-        </div>
-    </div>
-
-
-    <!-- About Sections -->
-     <div class="about-me">
-        <div class="about-me-div">
-            <h1 class="about-title-m">About Me</h1>
-        <div class="about-img"><img src="./img/sj-blazer.png" alt="Hiruja Edurapola"></div>
-        <div class="about">
-            <h1 class="about-title">About Me</h1>
-            <h3 class="about-desc">Hi, I'm Hiruja Edurapola, a 15-year-old developer from Sri Lanka. I study at Sri Sumangala College, Panadura, and love both playing chess and developing web applications in my free time.</h3>
-            <div class="about-langs">
-                <i class="devicon-html5-plain"></i>
-                <i class="devicon-css3-plain"></i>
-                <i class="devicon-javascript-plain"></i>
-                <i class="devicon-react-original"></i>
-                <i class="devicon-python-plain"></i>
-                <i class="devicon-arduino-plain"></i>
-                <i class="devicon-canva-original"></i>
-                <i class="devicon-blender-original"></i>
-            </div>
-        </div>
-    </div>
-     </div>
-
-
-     <!-- <div class="achievements">
-        <div class="age-div">
-            <h1 class="age-txt-head">Last Year...</h1>
-            <br>
-        </div>
-        <div class="counters">
-
-            <div class="counter-box">
-                <div class="counter-icon"><img src="./img/medal-ribbon-star-svgrepo-com.svg" alt="Gold Medal"></div>
-                <div class="counter-div" data-target="3">0</div>
-                <div class="counter-txt">Wins</div>
-            </div>
-            <div class="counter-box">
-                <div class="counter-icon"><img src="./img/badge-svgrepo-com.svg" alt="Merit"></div>
-                <div class="counter-div" data-target="10">0</div>
-                <div class="counter-txt">Merits</div>
-            </div>
-            <div class="counter-box">
-                <div class="counter-icon"><img src="./img/certificate-01-svgrepo-com.svg" alt="Certificate"></div>
-                <div class="counter-div" data-target="22">0</div>
-                <div class="counter-txt">Certificates</div>
-            </div>
-
-        </div>
-     </div> -->
-
-
-    <div class="links" id="socials">
-        <!-- <div class="link-txt">
-            <h1 class="link-topic">My Socials</h1>
-        </div> -->
-        <div class="link-boxes">
-            <div class="link-box" onclick="openHiruja(`https://www.linkedin.com/in/hiruja-edurapola-72b6b8341/`)">
-                <ld class="link-icon"></ld>
-                <h1 class="link-box-item">LinkedIn</h1>
-            </div>
-            <div class="link-box" onclick="openHiruja(`https://github.com/HirujaEdurapola/`)">
-                <git class="link-icon"></git>
-                <h1 class="link-box-item">Github</h1>
-            </div>
-            <div class="link-box" onclick="openHiruja(`https://www.youtube.com/@HirujaEdurapola/`)">
-                <yt class="link-icon"></yt>
-                <h1 class="link-box-item">Youtube</h1>
-            </div>
-            <div class="link-box" onclick="openHiruja(`https://www.instagram.com/hirujasj/`)">
-                <ig class="link-icon"></ig>
-                <h1 class="link-box-item">Instagram</h1>
-            </div>
-            <div class="link-box" onclick="openHiruja(`https://www.chess.com/member/devonsj/`)">
-                <chess class="link-icon">P</chess>
-                <h1 class="link-box-item">Chess.com</h1>
-            </div>
-            <div class="link-box" onclick="openHiruja(`https://lichess.org/@/NiceTry_GG/`)">
-                <lichess class="link-icon"></lichess>
-                <h1 class="link-box-item">Lichess</h1>
-            </div>
-            <div class="link-box" onclick="openHiruja(`https://www.hackerrank.com/hirujasj`)">
-            <hackerrank class="link-icon"></hackerrank>
-            <h1 class="link-box-item">Hackerrank</h1>
-            </div>
-        </div>
-    </div>
-    <div class="large-div" id="ageSJ">
-        <div class="age-div">
-            <h1 class="age-txt-head">I am</h1>
-        </div>
-        <div class="age">
-            <div class="age-box">
-                <div id="age-card">
-                    <h1 id="years">00</h1>
-                </div>
-                <div id="age-card">
-                    <h1 id="months">00</h1>
-                </div>
-                <div id="age-card">
-                    <h1 id="days">00</h1>
-                </div>
-                <div id="age-card">
-                    <h1 id="hours">00</h1>
-                </div>
-                <div id="age-card">
-                    <h1 id="minutes">00</h1>
-                </div>
-                <div id="age-card">
-                    <h1 id="seconds">00</h1>
-                </div>
-                <h1 class="age-txt">Years</h1>
-                <h1 class="age-txt">Months</h1>
-                <h1 class="age-txt">Days</h1>
-                <h1 class="age-txt">Hours</h1>
-                <h1 class="age-txt">Minutes</h1>
-                <h1 class="age-txt">Seconds</h1>
-            </div>
-            <div class="txt-mobile">
-                <h1 class="age-txts">Years</h1>
-                <h1 class="age-txts">Months</h1>
-                <h1 class="age-txts">Days</h1>
-                <h1 class="age-txts">Hours</h1>
-                <h1 class="age-txts">Minutes</h1>
-                <h1 class="age-txts">Seconds</h1>
-            </div>
-        </div>
-        <div class="age-div age-div-bot">
-            <h1 class="age-txt-head age-txt-body">Old</h1>
-        </div>
-    </div>
-
-    <!-- 
-    _______________________________
-       EXTENDED ACADEMICS SECTION
-              05/11 Update
-    _______________________________   
-    -->
-
-    <div class="academics" id="academics">
-
-    </div>
-
-
-    <!-- <div class="age-div projects-txt"><h1 class="age-txt-head projects-banner">Projects</h1></div> -->
-    <div class="projects" id="projects">
-
-        <div class="project-card">
-            <div class="project-card-surface">
-                <h1 class="project-title">Skyora</h1>
-                <h3 class="project-desc">An image enhancement platform developed solely using mathematical algorithms, completely avoiding Machine Learning/AI, to reduce costs.</h3>
-                <button class="project-but" onclick="launch('')">View</button>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-card-surface">
-                <h1 class="project-title">StudySync</h1>
-                <h3 class="project-desc">A full-suite web application designed for school students featuring organization tools, shared notes, a built-in AI assistant for chat, and a study plan generator/tracker.</h3>
-                <button class="project-but" onclick="launch('')">View</button>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-card-surface">
-                <h1 class="project-title">Sneak (SSCEHC Parental Control)</h1>
-                <h3 class="project-desc">A python app which can take screenshots of the computer screen periodically and saves it securely so the parents can monitor their kid's activity.</h3>
-                <button class="project-but" onclick="launch('')">View</button>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-card-surface">
-                <h1 class="project-title">SJ Trainer</h1>
-                <h3 class="project-desc">SJ Trainer is a free, ad-free chess training tool that offers users positions from real games for practice. Unlike traditional puzzles, it provides unbiased challenges with no preset advantages or disadvantages. Simply visit the website, analyze the position displayed, calculate your move, and enter it.</h3>
-                <button class="project-but"  onclick="launch('https://hirujaedurapola.github.io/SJ-Trainer/')">View</button>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-card-surface">
-                <h1 class="project-title">SJML</h1>
-                <h3 class="project-desc">SJML, is a toolkit designed to enhance web development projects with captivating CSS features. With SJML, developers can effortlessly incorporate stylish elements into their websites, elevating the user experience to new heights.
-
-                    Utilizing the power of CSS, SJML offers a wide range of features and effects, from animations to transitions and beyond. </h3>
-                <button class="project-but"  onclick="launch('https://hirujaedurapola.github.io/SJML/')">View</button>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-card-surface">
-                <h1 class="project-title">Web of Answers</h1>
-                <h3 class="project-desc">Web of Answer is like the Magic 8 Ball. But actually a Magic 400 Web! Test your fortune through your browser with just a click. Visit now and find answers for your Yes and No questions!!!</h3>
-                <button class="project-but"  onclick="launch('https://hirujaedurapola.github.io/Projects/Web-Of-Answers/')">View</button>
-            </div>
-        </div>
-
-          
-    </div>
-    
-    <br><br><br>
-    <center><a href="./diary/coding.html#all-projects-section" style="animation: shutdown 7s;"><button class="project-but">View All</button></a></center>
-
-    <footer style="padding: 4vh;">
-        <h1 class="footer-txt">Copyright &copy; <span>2024</span> Hiruja Edurapola</h1>
-    </footer>
-
-    <!-- <div class="contact-me" id="contact">
-        <h1>Contact Card</h1><br>
-       <div class="h1">
-        Name: Hiruja Edurapola<br>
-        Age: 14<br>
-        Location: Panadura, Sri Lanka<br>
-        Email: videohiruja@gmail.com<br>
-        Phone: 0718869216<br>
-        Website: <a href="#">hirujaedurapola.github.io</a>
-       </div>
+  <div class="hero-grid">
+    <!-- Left -->
+    <div>
+      <div class="hero-badge">Sri Lanka · Software Engineer</div>
+      <h1 class="hero-h1">
+        <span class="line-orange">Building</span>
+        <span class="line-white">The Future.</span>
+      </h1>
+      <p class="hero-sub">
+        <span>Web Dev</span> · <span>Game Dev</span> · <span>Astronomy</span> · <span>Photography</span> · <span>Software Engineering</span>
+      </p>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn-primary">
+          View Projects
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#" class="btn-secondary" download>
+          Download CV
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 3v13M5 20h14M8 13l4 4 4-4"/></svg>
+        </a>
       </div>
-    -->
-    <div id="sfcpuhhhq4kk5t8y4a51q27kt5rznelhdap"></div>
-    <script type="text/javascript" src="https://counter6.optistats.ovh/private/counter.js?c=puhhhq4kk5t8y4a51q27kt5rznelhdap&down=async" async></script>
-    <noscript><a href="https://www.freecounterstat.com" title="visitor counters"><img src="https://counter6.optistats.ovh/private/freecounterstat.php?c=puhhhq4kk5t8y4a51q27kt5rznelhdap" border="0" title="visitor counters" alt="visitor counters"></a></noscript>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">6+</span>
+          <span class="stat-label">Projects Built</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">8+</span>
+          <span class="stat-label">Technologies</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">∞</span>
+          <span class="stat-label">Curiosity</span>
+        </div>
+      </div>
+    </div>
 
-      <script>
-        const counter = document.querySelector("#sfcpuhhhq4kk5t8y4a51q27kt5rznelhdap")
-        counter.hidden = true
+    <!-- Right -->
+    <div class="hero-visual">
+      <div class="orbit-container">
+        <div class="orbit-ring orbit-ring-1"></div>
+        <div class="orbit-ring orbit-ring-2"></div>
+        <div class="orbit-dot orbit-dot-1"></div>
+        <div class="orbit-dot orbit-dot-2"></div>
+        <div class="orbit-center">
+          <div class="orbit-avatar"></div>
+        </div>
+        <div class="orbit-tag" style="top:8px;right:-10px">🌐 Web Dev</div>
+        <div class="orbit-tag" style="bottom:90px;right:-30px">🔭 Astronomer</div>
+        <div class="orbit-tag" style="top:110px;left:-20px">🎮 Game Dev</div>
+        <div class="orbit-tag" style="bottom:10px;left:40px">📷 Photographer</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        function showCounter(pw){
-            if (pw == "SJ"){
-                counter.hidden = false
-            }
-            else{
-                console.error("SJ: Unable to run command")
-            }
-        }
-      </script>
-    <script src="./js/app.js"></script>
-    <script src="./js/lang.js"></script>
-    <script src="./js/script.js"></script>
-    <script src="./js/menu.js"></script>
-    <script src="./js/counters.js"></script>
-    <script>
-        AOS.init()
-    </script>
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>Software Engineering</span><span class="accent">·</span>
+    <span>Web Development</span><span class="accent">·</span>
+    <span>Game Development</span><span class="accent">·</span>
+    <span>Astronomy</span><span class="accent">·</span>
+    <span>Photography</span><span class="accent">·</span>
+    <span>Chess</span><span class="accent">·</span>
+    <span>Speedcubing</span><span class="accent">·</span>
+    <span>Open Source</span><span class="accent">·</span>
+    <!-- duplicate for seamless -->
+    <span>Software Engineering</span><span class="accent">·</span>
+    <span>Web Development</span><span class="accent">·</span>
+    <span>Game Development</span><span class="accent">·</span>
+    <span>Astronomy</span><span class="accent">·</span>
+    <span>Photography</span><span class="accent">·</span>
+    <span>Chess</span><span class="accent">·</span>
+    <span>Speedcubing</span><span class="accent">·</span>
+    <span>Open Source</span><span class="accent">·</span>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-wrap">
+    <div class="projects-header">
+      <div class="reveal">
+        <div class="section-eyebrow">Selected Work</div>
+        <h2 class="section-title">Featured<br>Projects</h2>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <p class="section-sub">Things I've built that actually do something interesting.</p>
+      </div>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- Featured: Skyora -->
+      <div class="project-card featured reveal">
+        <div class="project-thumb" style="--gradient: linear-gradient(135deg,#FF5E3A,#FF8A4C)">
+          <div class="project-thumb-bg" style="background: url(./img/skyora.jpg); background-size: cover;"></div>
+          <!-- <div class="project-icon">🖼️</div> -->
+          <div class="project-icon"></div>
+          <div class="project-thumb-overlay"></div>
+        </div>
+        <div class="project-body" style="display:flex;flex-direction:column;justify-content:center;padding:40px;">
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Math Algorithms</span>
+            <span class="tag">Image Processing</span>
+          </div>
+          <div class="project-title">Skyora</div>
+          <p class="project-desc">An image enhancement platform built purely on mathematical algorithms — zero ML/AI. Smart compression and quality upscaling using custom-built computation, cutting costs dramatically.</p>
+          <a href="https://github.com/HirujaEdurapola" target="_blank" class="project-link" rel="noopener">
+            View Case Study
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- StudySync -->
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-thumb">
+          <div class="project-thumb-bg" style="background: url(./img/studysync.jpg); background-size: cover;"></div>
+          <!-- <div class="project-icon">📚</div> -->
+           <div class="project-icon"></div>
+          <div class="project-thumb-overlay"></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">AI Integration</span>
+          </div>
+          <div class="project-title">StudySync</div>
+          <p class="project-desc">Full-suite web app for school students — organization tools, shared notes, built-in AI assistant, and a study plan generator/tracker.</p>
+          <a href="https://github.com/HirujaEdurapola" target="_blank" class="project-link" rel="noopener">
+            View Case Study
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- SJ Trainer -->
+      <div class="project-card reveal reveal-delay-2">
+        <div class="project-thumb">
+          <div class="project-thumb-bg" style="background: url(./img/trainer.png); background-size: cover;"></div>
+          <!-- <div class="project-icon">♟️</div> -->
+           <div class="project-icon"></div>
+          <div class="project-thumb-overlay"></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">Chess Engine</span>
+            <span class="tag">Web App</span>
+          </div>
+          <div class="project-title">SJ Trainer</div>
+          <p class="project-desc">Free, ad-free chess training tool. Real game positions, zero bias — no preset advantages. Just you and the board.</p>
+          <a href="https://github.com/HirujaEdurapola" target="_blank" class="project-link" rel="noopener">
+            View Case Study
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Sneak -->
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-thumb">
+          <div class="project-thumb-bg" style="background: url(./img/sneak.png); background-size: cover; background-position: center;"></div>
+          <!-- <div class="project-icon">🔍</div> -->
+           <div class="project-icon"></div>
+          <div class="project-thumb-overlay"></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Desktop App</span>
+            <span class="tag">Security</span>
+          </div>
+          <div class="project-title">Sneak</div>
+          <p class="project-desc">Parental control app for SSCEHC — periodically captures screen activity and stores it securely so parents can monitor safely.</p>
+          <a href="https://github.com/HirujaEdurapola" target="_blank" class="project-link" rel="noopener">
+            View Case Study
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- SJML -->
+      <div class="project-card reveal reveal-delay-2">
+        <div class="project-thumb">
+          <div class="project-thumb-bg" style="background: url(./img/sjml.jpg); background-size: cover;"></div>
+          <!-- <div class="project-icon">🎨</div> -->
+           <div class="project-icon"></div>
+          <div class="project-thumb-overlay"></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="tag">CSS Library</span>
+            <span class="tag">Open Source</span>
+            <span class="tag">Toolkit</span>
+          </div>
+          <div class="project-title">SJML</div>
+          <p class="project-desc">A CSS toolkit for web devs that need to ship stunning UI fast. Animations, transitions, effects — plug and play.</p>
+          <a href="https://github.com/HirujaEdurapola" target="_blank" class="project-link" rel="noopener">
+            View Case Study
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- VIEW ALL PROJECTS -->
+    <div class="projects-view-all reveal">
+      <a href="https://github.com/HirujaEdurapola" target="_blank" rel="noopener" class="btn-view-all">
+        View All Projects on GitHub
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     PHOTOGRAPHY FILM REEL
+══════════════════════════════════════════════ -->
+<section id="photography">
+  <div class="section-wrap" style="padding-bottom:0;">
+    <div class="projects-header">
+      <div class="reveal">
+        <div class="section-eyebrow">Visual Archive</div>
+        <h2 class="section-title">Captured<br>Moments.</h2>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <p class="section-sub">Night skies, city streets, and everything in between — shot through glass and light.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="film-reel-outer reveal">
+    <div class="film-reel-track" id="filmReel">
+
+      <div class="film-frame" style="--grad: linear-gradient(160deg,#0A1628,#0D3B6E)">
+        <div class="film-bg" style="background: url(./img/sj-snaps-2.jpg); background-size: cover; background-position: center;"></div>
+        <div class="film-grain"></div>
+        <div class="film-overlay"></div>
+        <!-- <div class="film-icon">🌌</div> -->
+        <div class="film-label">MACRO·001</div>
+        <div class="film-meta">
+          <div class="film-meta-title">Pankcakes</div>
+          <div class="film-meta-sub">Sweet layers, warm light, and cozy rainy day vibes 🥞🍓✨</div>
+        </div>
+      </div>
+
+      <div class="film-frame" style="height:300px;align-self:flex-end">
+        <div class="film-bg" style="background: url(./img/sj-snaps-5.jpg); background-size: cover; background-position: center;"></div>
+        <div class="film-grain"></div>
+        <div class="film-overlay"></div>
+        <!-- <div class="film-icon">🪐</div> -->
+        <div class="film-label">NATURE·001</div>
+        <div class="film-meta">
+          <div class="film-meta-title">Nature's Beauty</div>
+          <div class="film-meta-sub">Golden hour glow on the smallest details ✨🌿 A quiet, peaceful moment.</div>
+        </div>
+      </div>
+
+      <div class="film-frame" style="height:380px">
+        <div class="film-bg" style="background: url(./img/sj-snaps-7.jpg); background-size: cover; background-position: center;"></div>
+        <div class="film-grain"></div>
+        <div class="film-overlay"></div>
+        <!-- <div class="film-icon">🌿</div> -->
+        <div class="film-label">ASTRO·001</div>
+        <div class="film-meta">
+          <div class="film-meta-title">Astro Photography</div>
+          <div class="film-meta-sub">Far away in the sky, right here on the screen 🌙📱</div>
+        </div>
+      </div>
+
+      <div class="film-frame" style="height:290px;align-self:flex-end">
+        <div class="film-bg" style="background: url(./img/sj-snaps-1.png); background-size: cover; background-position: center;"></div>
+        <div class="film-grain"></div>
+        <div class="film-overlay"></div>
+        <!-- <div class="film-icon">🌙</div> -->
+        <div class="film-label">AESTHETIC·001</div>
+        <div class="film-meta">
+          <div class="film-meta-title">Traditional</div>
+          <div class="film-meta-sub">One lamp in focus, others fading behind 🕯️✨</div>
+        </div>
+      </div>
+
+      <div class="film-frame" style="height:360px">
+        <div class="film-bg" style="background: url(./img/sj-snaps-8.jpg); background-size: cover; background-position: center;"></div>
+        <div class="film-grain"></div>
+        <div class="film-overlay"></div>
+        <!-- <div class="film-icon">🏙️</div> -->
+        <div class="film-label">AESTHETIC·002</div>
+        <div class="film-meta">
+          <div class="film-meta-title">Music Heals</div>
+          <div class="film-meta-sub">When the room is dark and the music feels louder 🎧✨</div>
+        </div>
+      </div>
+
+      <div class="film-frame" style="height:310px;align-self:flex-end">
+        <div class="film-bg" style="background: url(./img/sj-snaps-6.jpg); background-size: cover; background-position: center;"></div>
+        <div class="film-grain"></div>
+        <div class="film-overlay"></div>
+        <!-- <div class="film-icon">☄️</div> -->
+        <div class="film-label">SPOTTING·001</div>
+        <div class="film-meta">
+          <div class="film-meta-title">A Big Bird</div>
+          <div class="film-meta-sub">සුරකිමු ලකඹර 💙💛 Sri Lanka Airforce.</div>
+        </div>
+      </div>
+
+      <div class="film-frame" style="height:350px">
+        <div class="film-bg" style="background: url(./img/sj-snaps-4.jpg); background-size: cover; background-position: center;"></div>
+        <div class="film-grain"></div>
+        <div class="film-overlay"></div>
+        <!-- <div class="film-icon">✨</div> -->
+        <div class="film-label">MACRO·002</div>
+        <div class="film-meta">
+          <div class="film-meta-title">Dying Flower</div>
+          <div class="film-meta-sub">Even in fading, there is beauty 🌼</div>
+        </div>
+      </div>
+
+      <div class="film-frame" style="height:300px;align-self:flex-end">
+        <div class="film-bg" style="background: url(./img/sj-snaps-3.jpg); background-size: cover; background-position: center;"></div>
+        <div class="film-grain"></div>
+        <div class="film-overlay"></div>
+        <!-- <div class="film-icon">🌧️</div> -->
+        <div class="film-label">ASTRO·002</div>
+        <div class="film-meta">
+          <div class="film-meta-title">Overcast Moon</div>
+          <div class="film-meta-sub">Checking in on the neighbors 🔭</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="film-reel-footer reveal">
+    <span class="film-scroll-hint">Drag to explore</span>
+    <a href="photography.html" class="btn-cta-arrow">
+      View Full Gallery
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+  <div style="height:80px;"></div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     GRAPHIC DESIGN POSTER WALL
+══════════════════════════════════════════════ -->
+<section id="design">
+  <div class="section-wrap">
+    <div class="projects-header">
+      <div class="reveal">
+        <div class="section-eyebrow">Design Archive</div>
+        <h2 class="section-title">Designed<br>Experiments.</h2>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <p class="section-sub">Posters, identities, interfaces — where code meets aesthetics.</p>
+      </div>
+    </div>
+
+    <div class="poster-wall reveal" id="posterWall">
+
+      <div class="poster-card" style="left:5%;top:30px;height:320px;transform:rotate(-4deg);z-index:3;--grad:linear-gradient(140deg,#FF5E3A,#FF8A4C)">
+        <div class="poster-card-inner" style="background: url(./img/SSC-Leo-T-Shirt-Post.png); background-size: cover; background-position: center;">
+          <!-- <div class="poster-icon">🎯</div> -->
+          <div class="poster-meta">
+            <div class="poster-meta-title">Product Poster</div>
+            <div class="poster-meta-type">Promotional</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="poster-card" style="left:23%;top:10px;height:350px;transform:rotate(2deg);z-index:4;width:240px">
+        <div class="poster-card-inner" style="background: url(./img/SSCAS-New-Year-Post.png); background-size: cover; background-position: center;">
+          <!-- <div class="poster-icon">🔭</div> -->
+          <div class="poster-meta">
+            <div class="poster-meta-title">New Year Poster</div>
+            <div class="poster-meta-type">Wishing Poster</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="poster-card" style="left:42%;top:50px;height:300px;transform:rotate(-2deg);z-index:3">
+        <div class="poster-card-inner" style="background: url(./img/SSC-Aero-Awurudu-Post.png); background-size: cover; background-position: center;">
+          <!-- <div class="poster-icon">📱</div> -->
+          <div class="poster-meta">
+            <div class="poster-meta-title">Awurudu Poster</div>
+            <div class="poster-meta-type">Social Media</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="poster-card" style="left:60%;top:20px;height:340px;transform:rotate(3deg);z-index:2;width:200px">
+        <div class="poster-card-inner" style="background:url(./img/aeternum.jpeg); background-size: cover; background-position: center;">
+          <!-- <div class="poster-icon">⚡</div> -->
+          <div class="poster-meta">
+            <div class="poster-meta-title">Event Poster</div>
+            <div class="poster-meta-type">Event Coverage</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="poster-card" style="right:2%;top:40px;height:320px;transform:rotate(-3deg);z-index:3">
+        <div class="poster-card-inner" style="background:url(./img/Prefects-Wristband.png); background-size: cover; background-position: center;">
+          <!-- <div class="poster-icon">🌿</div> -->
+          <div class="poster-meta">
+            <div class="poster-meta-title">Product Promotion</div>
+            <div class="poster-meta-type">Promotional Poster</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="poster-wall-footer reveal">
+      <p class="section-sub" style="font-size:14px;">Hover over the posters to explore.</p>
+      <a href="design.html" class="btn-cta-arrow">
+        View Design Archive
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     BLOG TERMINAL
+══════════════════════════════════════════════ -->
+<section id="blog">
+  <div class="section-wrap">
+    <div class="projects-header" style="margin-bottom:40px;">
+      <div class="reveal">
+        <div class="section-eyebrow">Knowledge Stream</div>
+        <h2 class="section-title">Thought<br>Logs.</h2>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <p class="section-sub">Research notes, coding discoveries, and dispatches from the observatory.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="terminal-header">
+        <div class="terminal-dots">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="terminal-title">sj@research-lab:~/blog$ tail -f transmissions.log</div>
+      </div>
+      <div class="terminal-body">
+
+        <div class="log-entry" data-delay="0">
+          <div class="log-timestamp">2025.10.10</div>
+          <div class="log-content">
+            <a href="./diary/coding.html" style="color:inherit;text-decoration:none;display:block;">
+              <div class="log-title">🧑🏽‍💻 My Coding Career</div>
+              <div class="log-excerpt">I've been coding for about 7 years now, building web apps, games, and software while learning everything from HTML/CSS to Python and game engines.</div>
+              <div class="log-tags">
+                <span class="log-tag orange">Coding</span>
+                <span class="log-tag">Career</span>
+              </div>
+            </a>
+          </div>
+          <div class="log-arrow">→</div>
+        </div>
+
+        <div class="log-entry" data-delay="150">
+          <div class="log-timestamp">2024.11.18</div>
+          <div class="log-content">
+            <a href="./diary/cubing.html" style="color:inherit;text-decoration:none;display:block;">
+              <div class="log-title">🔥 My Speedcubing Journey</div>
+              <div class="log-excerpt">A hobby turned discipline — the path from beginner solves to sub-20 times and the puzzles that taught me focus, pattern recognition, and patience.</div>
+              <div class="log-tags">
+                <span class="log-tag orange">Cubing</span>
+                <span class="log-tag">Hobby</span>
+              </div>
+            </a>
+          </div>
+          <div class="log-arrow">→</div>
+        </div>
+
+        <div class="log-entry" data-delay="300">
+          <div class="log-timestamp">2025.06.20</div>
+          <div class="log-content">
+            <a href="./diary/chess.html" style="color:inherit;text-decoration:none;display:block;">
+              <div class="log-title">♟️ My Journey as a Chess Player</div>
+              <div class="log-excerpt">From the school chess club to district tournament wins, I explore how chess shaped my thinking, strategy, and competitive mindset.</div>
+              <div class="log-tags">
+                <span class="log-tag orange">Chess</span>
+                <span class="log-tag">Mindset</span>
+              </div>
+            </a>
+          </div>
+          <div class="log-arrow">→</div>
+        </div>
+
+        <div class="terminal-prompt">
+          <span>Fetching latest transmissions</span>
+          <span class="terminal-cursor"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-footer reveal reveal-delay-2">
+      <a href="blog.html" class="btn-cta-arrow">
+        Read All Posts
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-wrap">
+    <div class="about-inner">
+      <div class="reveal">
+        <div class="section-eyebrow">About Me</div>
+        <h2 class="section-title">Code by day.<br>Stars by night.</h2>
+        <p class="about-bio">
+          I'm <strong>Hiruja Edurapola</strong> — known as <strong>SJ</strong>. A 15-year-old builder from <strong>Sri Lanka</strong> who spends weekdays writing code, weekends stargazing, and every spare moment pushing pixels until something looks interesting.
+        </p>
+        <p class="about-bio">
+          I study at <strong>Sri Sumangala College, Panadura</strong>, and I founded <strong>Hiruja Studios</strong> and <strong>SJ Research Labs</strong> as my personal space to experiment, break things, and figure out how they work. I believe technology should be beautiful, fast, and built with curiosity.
+        </p>
+        <div class="about-interests">
+          <span class="interest-chip">🔭 Astronomy</span>
+          <a href="./diary/coding.html"><span class="interest-chip">👨🏽‍💻 Coding</span></a>
+          <a href="./photography.html"><span class="interest-chip">📷 Photography</span></a>
+          <a href="./design.html"><span class="interest-chip">🎨 Graphic Design</span></a>
+          <a href="./diary/chess.html"><span class="interest-chip">♟️ Chess</span></a>
+          <a href="./diary/cubing.html"><span class="interest-chip">🔥 Speedcubing</span></a>
+          <span class="interest-chip">🎮 Gaming</span>
+          <span class="interest-chip">🏎️ Formula 1</span>
+          <span class="interest-chip">✈️ Aviation</span>
+          <span class="interest-chip">🦍 Kaiju</span>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-2">
+        <div class="section-eyebrow" style="margin-bottom:36px;">Timeline</div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">2018</div>
+            <div class="timeline-title">Introduction to Hardware</div>
+            <div class="timeline-desc">The time I got my hands on an arudino, and blinked an LED.</div>
+          </div>
+          
+          
+          <div class="timeline-item">
+            <div class="timeline-year">2021</div>
+            <div class="timeline-title">First Lines of Code</div>
+            <div class="timeline-desc">Wrote my first HTML page. Immediately obsessed. Started learning web development intensively — CSS, JavaScript, all of it.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2024</div>
+            <div class="timeline-title">Open Sourcer</div>
+            <div class="timeline-desc">Published first real works at SJ Research Labs, began serious astronomy observation. Launched SJ Trainer and Sneak.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-title">More Projects</div>
+            <div class="timeline-desc">Built Skyora — image enhancement without ML, purely math-driven. Shipped StudySync for students. Expanded into game development.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2026</div>
+            <div class="timeline-title">Present: Building the Future</div>
+            <div class="timeline-desc">Exploring game dev with Godot, deepening software engineering skills, and working on what comes next.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-wrap">
+    <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto 60px;">
+      <div class="section-eyebrow" style="justify-content:center;">Expertise</div>
+      <h2 class="section-title">Skills &<br>Technologies</h2>
+      <p class="section-sub" style="margin:0 auto;">The tools I use to turn ideas into reality.</p>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-card-icon">🌐</div>
+        <div class="skill-card-title">Web Development</div>
+        <div class="skill-item">
+          <div class="skill-item-top"><span>HTML / CSS</span><span class="skill-item-pct">90%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-top"><span>JavaScript</span><span class="skill-item-pct">75%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-top"><span>React</span><span class="skill-item-pct">65%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-top"><span>Node.js</span><span class="skill-item-pct">60%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-1">
+        <div class="skill-card-icon">⚙️</div>
+        <div class="skill-card-title">Software & Programming</div>
+        <div class="skill-item">
+          <div class="skill-item-top"><span>Python</span><span class="skill-item-pct">80%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-top"><span>Algorithms & Logic</span><span class="skill-item-pct">90%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-top"><span>Git & Version Control</span><span class="skill-item-pct">90%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-top"><span>C / C++</span><span class="skill-item-pct">50%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="50"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-2">
+        <div class="skill-card-icon">🎮</div>
+        <div class="skill-card-title">Game Development</div>
+        <div class="skill-item">
+          <div class="skill-item-top"><span>Godot Engine</span><span class="skill-item-pct">60%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-top"><span>Game Design</span><span class="skill-item-pct">65%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-top"><span>GDScript</span><span class="skill-item-pct">55%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="55"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-1">
+        <div class="skill-card-icon">🔭</div>
+        <div class="skill-card-title">Astronomy & Research</div>
+        <div class="skill-item">
+          <div class="skill-item-top"><span>Celestial Observation</span><span class="skill-item-pct">80%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-top"><span>Astrophotography</span><span class="skill-item-pct">70%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-top"><span>Research Documentation</span><span class="skill-item-pct">85%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-2">
+        <div class="skill-card-icon">🎨</div>
+        <div class="skill-card-title">Creative & Design</div>
+        <div class="skill-item">
+          <div class="skill-item-top"><span>Photography</span><span class="skill-item-pct">80%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-top"><span>Video Editing</span><span class="skill-item-pct">75%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-top"><span>Graphic Design</span><span class="skill-item-pct">90%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-top"><span>UI / UX</span><span class="skill-item-pct">75%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-3">
+        <div class="skill-card-icon">♟️</div>
+        <div class="skill-card-title">Strategy & Problem Solving</div>
+        <div class="skill-item">
+          <div class="skill-item-top"><span>Chess</span><span class="skill-item-pct">85%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-top"><span>Speedcubing (3×3)</span><span class="skill-item-pct">88%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-top"><span>Critical Thinking</span><span class="skill-item-pct">90%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-wrap">
+    <div class="contact-wrap">
+      <div class="reveal">
+        <div class="section-eyebrow">Get In Touch</div>
+        <h2 class="section-title">Let's Build<br>Something.</h2>
+        <p class="section-sub" style="margin-bottom:40px;">Whether it's a collab, a project idea, or just geeking out about space — I'm down.</p>
+
+        <div class="contact-info-line">
+          <div class="contact-icon">📧</div>
+          <div class="contact-info-text">
+            <strong>Email</strong>
+            <!-- <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f1879895949e999883849b90b1969c90989ddf929e9c">[email&#160;protected]</a> -->
+            <a href="mailto:contact@hirujaedurapola.com" style="color: unset; text-decoration: none;">contact@hirujaedurapola.com</a>
+          </div>
+        </div>
+        <div class="contact-info-line">
+          <div class="contact-icon">📍</div>
+          <div class="contact-info-text">
+            <strong>Location</strong>
+            Panadura, Sri Lanka
+          </div>
+        </div>
+        <div class="contact-info-line">
+          <div class="contact-icon">📞</div>
+          <div class="contact-info-text">
+            <strong>Contact</strong>
+            +94 71 886 9216
+          </div>
+        </div>
+
+        <div class="social-row">
+          <a href="https://github.com/HirujaEdurapola" target="_blank" rel="noopener" class="social-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18A4.65 4.65 0 0 1 21 13.6c0 4.61-2.81 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3"/></svg>
+            GitHub
+          </a>
+          <a href="https://www.instagram.com/hirujasj" target="_blank" rel="noopener" class="social-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            Instagram
+          </a>
+          <a href="https://www.youtube.com/@hirujasj" target="_blank" rel="noopener" class="social-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            YouTube
+          </a>
+
+          <a href="https://www.linkedin.com/in/hiruja-edurapola-72b6b8341/" target="_blank" rel="noopener" class="social-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            LinkedIn
+          </a>
+</div>
+      </div>
+
+      <div class="reveal reveal-delay-2">
+        <form class="contact-form" onsubmit="handleSubmit(event); sendEmail();">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="What's this about?">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Tell me about your idea..." required></textarea>
+          </div>
+          <button type="submit" class="btn-submit" id="submitBtn">
+            Send Message
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2L15 22 11 13 2 9l20-7z"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">SJ · Hiruja Edurapola</div>
+    <ul class="footer-links">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://github.com/HirujaEdurapola" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+    <div class="footer-copy">© 2025 Hiruja Edurapola. Built with curiosity.</div>
+  </div>
+</footer>
+
+<script>
+  function sendEmail() {
+    console.log("Sending email...");
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let subject = document.getElementById("subject").value || "No Subject";
+    let message = document.getElementById("message").value;
+    let link = "mailto:contact@hirujaedurapola.com?cc=videohiruja%40gmail.com&subject=Test&body=Body";
+    console.log(`Email content:\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`);
+
+    let newLink = `mailto:contact@hirujaedurapola.com?subject=${subject}&body=${name}%20(${email})%20wrote:%0D%0A${message}`;
+    window.open(newLink, "_blank");
+  }
+</script>
+
+<!-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
+<script src="./js/script.js"></script>
 </body>
-
 </html>

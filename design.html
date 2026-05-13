@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design Archive — SJ · Hiruja Edurapola</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#08090D;--bg-1:#0C0E16;--bg-2:#101420;--card:#111520;--card-b:#1A2030;--border:rgba(255,255,255,0.06);--orange:#FF5E3A;--cyan:#00E5FF;--white:#F7F7F7;--muted:#6A7A90;--r:14px;--glow-c:rgba(0,229,255,0.15);--glow-o:rgba(255,94,58,0.18)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;cursor:none}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--orange);border-radius:2px}
+.cursor-dot,.cursor-ring{position:fixed;pointer-events:none;z-index:9999;border-radius:50%;transform:translate(-50%,-50%)}
+.cursor-dot{width:8px;height:8px;background:var(--orange);top:0;left:0}
+.cursor-ring{width:36px;height:36px;border:1.5px solid rgba(0,229,255,0.7);top:0;left:0;transition:transform 0.18s ease}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");opacity:0.028;pointer-events:none;z-index:9998}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 60px;display:flex;align-items:center;justify-content:space-between;background:rgba(8,9,13,0.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:3px;color:var(--white);text-decoration:none;display:flex;align-items:center;gap:10px}
+.nav-logo span{width:28px;height:28px;background:var(--orange);border-radius:5px;display:grid;place-items:center;font-size:14px}
+.nav-back{display:inline-flex;align-items:center;gap:8px;font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.3s}
+.nav-back:hover{color:var(--white)}
+
+/* PAGE HERO */
+.page-hero{min-height:52vh;display:flex;align-items:flex-end;padding:140px 60px 60px;position:relative;overflow:hidden;background:linear-gradient(to bottom,#0F0A18,var(--bg))}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 0%,rgba(255,94,58,0.07),transparent)}
+.page-hero-inner{position:relative;z-index:1;max-width:1400px;margin:0 auto;width:100%}
+.hero-eyebrow{font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:12px;display:flex;align-items:center;gap:12px}
+.hero-eyebrow::before{content:'';width:30px;height:1px;background:var(--orange)}
+.page-hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(60px,8vw,110px);letter-spacing:2px;line-height:0.95;margin-bottom:16px}
+.page-hero h1 span{color:var(--orange)}
+.page-hero-sub{font-size:16px;color:var(--muted);max-width:500px;line-height:1.7}
+
+/* CATEGORY FILTER */
+.filter-wrap{max-width:1400px;margin:0 auto;padding:48px 60px 32px;display:flex;gap:12px;flex-wrap:wrap}
+.filter-btn{font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);background:var(--card);border:1px solid var(--border);padding:9px 20px;border-radius:4px;cursor:none;transition:all 0.3s}
+.filter-btn.active,.filter-btn:hover{color:var(--white);border-color:var(--orange);box-shadow:0 0 16px var(--glow-o)}
+.filter-btn.active{background:rgba(255,94,58,0.07)}
+
+/* EXHIBITION GRID */
+.exhibition{max-width:1400px;margin:0 auto;padding:0 60px 120px}
+.exhibit-row{display:grid;gap:24px;margin-bottom:24px}
+.exhibit-row.wide{grid-template-columns:1.6fr 1fr}
+.exhibit-row.even{grid-template-columns:1fr 1fr}
+.exhibit-row.triple{grid-template-columns:1fr 1fr 1fr}
+.exhibit-card{border-radius:var(--r);overflow:hidden;border:1px solid var(--border);position:relative;cursor:none;transition:transform 0.45s cubic-bezier(0.23,1,0.32,1),box-shadow 0.45s,border-color 0.45s;background:var(--card)}
+.exhibit-card:hover{transform:translateY(-8px);border-color:rgba(255,94,58,0.3);box-shadow:0 30px 80px rgba(0,0,0,0.6),0 0 40px var(--glow-o)}
+.exhibit-visual{height:360px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.exhibit-visual.tall{height:460px}
+.exhibit-visual.short{height:260px}
+.exhibit-bg{position:absolute;inset:0;background:var(--grad);opacity:0.4;transition:opacity 0.4s,transform 0.6s}
+.exhibit-card:hover .exhibit-bg{opacity:0.6;transform:scale(1.05)}
+.exhibit-emoji{font-size:64px;position:relative;z-index:1;transition:transform 0.4s}
+.exhibit-card:hover .exhibit-emoji{transform:scale(1.1) rotate(-3deg)}
+.exhibit-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.1) 60%,transparent 100%)}
+
+/* Glass label top */
+.exhibit-type-badge{position:absolute;top:16px;right:16px;font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);background:rgba(8,9,13,0.65);backdrop-filter:blur(12px);border:1px solid var(--border);padding:5px 10px;border-radius:4px;z-index:3}
+.exhibit-num{position:absolute;top:16px;left:20px;font-family:'Bebas Neue',sans-serif;font-size:40px;letter-spacing:2px;color:rgba(255,255,255,0.06);z-index:3;line-height:1}
+
+.exhibit-body{padding:24px;background:var(--card)}
+.exhibit-title{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:1.5px;color:var(--white);margin-bottom:6px}
+.exhibit-desc{font-size:13px;line-height:1.7;color:var(--muted);margin-bottom:14px}
+.exhibit-tools{display:flex;flex-wrap:wrap;gap:8px}
+.tool-tag{font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange);background:rgba(255,94,58,0.08);border:1px solid rgba(255,94,58,0.2);padding:4px 10px;border-radius:3px}
+
+/* Spotlight hover effect: dim siblings */
+.exhibition:hover .exhibit-card:not(:hover){filter:brightness(0.55);transition:filter 0.4s}
+.exhibit-card{transition:transform 0.45s,box-shadow 0.45s,border-color 0.45s,filter 0.4s}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:0.12s}
+.reveal-delay-2{transition-delay:0.24s}
+
+@media(max-width:900px){.exhibit-row.wide,.exhibit-row.even,.exhibit-row.triple{grid-template-columns:1fr}.filter-wrap{padding:32px 24px 20px}.exhibition{padding:0 24px 80px}}
+@media(max-width:600px){nav{padding:16px 24px}.page-hero{padding:120px 24px 48px}}
+</style>
+</head>
+<body>
+<div class="cursor-dot" id="cd"></div>
+<div class="cursor-ring" id="cr"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo"><span>SJ</span> Hiruja</a>
+  <a href="index.html#design" class="nav-back">
+    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Back to Portfolio
+  </a>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="hero-eyebrow">Design Archive</div>
+    <h1>Design <span>Exhibition</span></h1>
+    <p class="page-hero-sub">Posters, identities, layouts, and systems. Every piece is an experiment in communication.</p>
+  </div>
+</div>
+
+<div class="filter-wrap">
+  <button class="filter-btn active" onclick="filterDesign(this,'all')">All Work</button>
+  <button class="filter-btn" onclick="filterDesign(this,'poster')">🎯 Posters</button>
+  <button class="filter-btn" onclick="filterDesign(this,'brand')">⚡ Branding</button>
+  <button class="filter-btn" onclick="filterDesign(this,'social')">📱 Social</button>
+  <button class="filter-btn" onclick="filterDesign(this,'event')">🎫 Events</button>
+  <button class="filter-btn" onclick="filterDesign(this,'ui')">🖥️ UI Design</button>
+</div>
+
+<div class="exhibition">
+
+  <div class="exhibit-row wide reveal">
+
+    <div class="exhibit-card" data-cat="poster">
+      <div class="exhibit-visual" style="width:100%;height:auto;aspect-ratio:4 / 5;">
+        <div class="exhibit-bg" style="background:url(./img/SSC-Leo-T-Shirt-Post.png) center/cover"></div>
+        <div class="exhibit-type-badge">Promotional</div>
+        <div class="exhibit-num">01</div>
+      </div>
+      <div class="exhibit-body">
+        <div class="exhibit-title">Product Poster</div>
+        <div class="exhibit-desc">Promo poster for apparel launch — bold typography, strong visual hierarchy, and a clean retail feel.</div>
+        <div class="exhibit-tools"><span class="tool-tag">Illustrator</span><span class="tool-tag">Print</span></div>
+      </div>
+    </div>
+
+    <div class="exhibit-card" data-cat="poster">
+      <div class="exhibit-visual" style="width:100%;height:auto;aspect-ratio:1824 / 2336;">
+        <div class="exhibit-bg" style="background:url(./img/SSCAS-New-Year-Post.png) center/cover"></div>
+        <div class="exhibit-type-badge">Wishing Poster</div>
+        <div class="exhibit-num">02</div>
+      </div>
+      <div class="exhibit-body">
+        <div class="exhibit-title">New Year Poster</div>
+        <div class="exhibit-desc">Seasonal campaign artwork designed for maximum visual impact on social and printed display.</div>
+        <div class="exhibit-tools"><span class="tool-tag">Figma</span><span class="tool-tag">Print</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="exhibit-row triple reveal" style="transition-delay:0.1s">
+
+    <div class="exhibit-card" data-cat="social">
+      <div class="exhibit-visual" style="width:100%;height:auto;aspect-ratio:1 / 1;">
+        <div class="exhibit-bg" style="background:url(./img/SSC-Aero-Awurudu-Post.png) center/cover"></div>
+        <div class="exhibit-type-badge">Social Media</div>
+        <div class="exhibit-num">03</div>
+      </div>
+      <div class="exhibit-body">
+        <div class="exhibit-title">Awurudu Poster</div>
+        <div class="exhibit-desc">Festive social media creative celebrating tradition with bright color and strong composition.</div>
+        <div class="exhibit-tools"><span class="tool-tag">Figma</span><span class="tool-tag">Social</span></div>
+      </div>
+    </div>
+
+    <div class="exhibit-card" data-cat="poster">
+      <div class="exhibit-visual" style="width:100%;height:auto;aspect-ratio:27 / 32;">
+        <div class="exhibit-bg" style="background:url(./img/aeternum.jpeg) center/cover"></div>
+        <div class="exhibit-type-badge">Event Coverage</div>
+        <div class="exhibit-num">04</div>
+      </div>
+      <div class="exhibit-body">
+        <div class="exhibit-title">Event Poster</div>
+        <div class="exhibit-desc">Visual identity for a live event — bold imagery combined with clean typography and modern motion-ready styling.</div>
+        <div class="exhibit-tools"><span class="tool-tag">Photoshop</span><span class="tool-tag">Print</span></div>
+      </div>
+    </div>
+
+    <div class="exhibit-card" data-cat="poster">
+      <div class="exhibit-visual" style="width:100%;height:auto;aspect-ratio:1 / 1;">
+        <div class="exhibit-bg" style="background:url(./img/Prefects-Wristband.png) center/cover"></div>
+        <div class="exhibit-type-badge">Promotional Poster</div>
+        <div class="exhibit-num">05</div>
+      </div>
+      <div class="exhibit-body">
+        <div class="exhibit-title">Product Promotion</div>
+        <div class="exhibit-desc">Poster campaign for a wristband product launch, designed to feel premium and modern.</div>
+        <div class="exhibit-tools"><span class="tool-tag">Illustrator</span><span class="tool-tag">Brand</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="exhibit-row even reveal" style="transition-delay:0.2s">
+
+    <div class="exhibit-card" data-cat="poster">
+      <div class="exhibit-visual" style="width:100%;height:auto;aspect-ratio:1 / 1;">
+        <div class="exhibit-bg" style="background:url(./img/SSC-Aero-New-Year-Post.png) center/cover"></div>
+        <div class="exhibit-type-badge">Seasonal Poster</div>
+        <div class="exhibit-num">06</div>
+      </div>
+      <div class="exhibit-body">
+        <div class="exhibit-title">Aero New Year Poster</div>
+        <div class="exhibit-desc">A celebratory poster with clean branding and bold festive visuals for the Aero design team.</div>
+        <div class="exhibit-tools"><span class="tool-tag">Figma</span><span class="tool-tag">Print</span></div>
+      </div>
+    </div>
+
+    <div class="exhibit-card" data-cat="brand">
+      <div class="exhibit-visual" style="width:100%;height:auto;aspect-ratio:4 / 5;">
+        <div class="exhibit-bg" style="background:url(./img/SSCPG-Prefects-Match-Post.png) center/cover"></div>
+        <div class="exhibit-type-badge">Event Poster</div>
+        <div class="exhibit-num">07</div>
+      </div>
+      <div class="exhibit-body">
+        <div class="exhibit-title">Match Day Poster</div>
+        <div class="exhibit-desc">Dynamic match announcement artwork designed for both print and digital distribution.</div>
+        <div class="exhibit-tools"><span class="tool-tag">Illustrator</span><span class="tool-tag">Brand</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="exhibit-row even reveal" style="transition-delay:0.3s">
+
+    <div class="exhibit-card" data-cat="event">
+      <div class="exhibit-visual" style="width:100%;height:auto;aspect-ratio:1 / 1;">
+        <div class="exhibit-bg" style="background:url('./img/SSCELA-AGM-Post .png') center/cover"></div>
+        <div class="exhibit-type-badge">AGM Poster</div>
+        <div class="exhibit-num">08</div>
+      </div>
+      <div class="exhibit-body">
+        <div class="exhibit-title">AGM Announcement</div>
+        <div class="exhibit-desc">Corporate announcement poster created for the annual general meeting, with strong structure and elegant type.</div>
+        <div class="exhibit-tools"><span class="tool-tag">Figma</span><span class="tool-tag">Print</span></div>
+      </div>
+    </div>
+
+    <div class="exhibit-card" data-cat="brand">
+      <div class="exhibit-visual" style="width:100%;height:auto;aspect-ratio:1 / 1;">
+        <div class="exhibit-bg" style="background:url(./img/SSCAS_Shirt_Poster_New.png) center/cover"></div>
+        <div class="exhibit-type-badge">Merch Poster</div>
+        <div class="exhibit-num">09</div>
+      </div>
+      <div class="exhibit-body">
+        <div class="exhibit-title">Shirt Launch Poster</div>
+        <div class="exhibit-desc">Merchandise campaign poster designed for a fresh product drop with clear branding and strong imagery.</div>
+        <div class="exhibit-tools"><span class="tool-tag">Illustrator</span><span class="tool-tag">Print</span></div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+const cd=document.getElementById('cd'),cr=document.getElementById('cr');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cd.style.left=mx+'px';cd.style.top=my+'px'});
+(function a(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;cr.style.left=rx+'px';cr.style.top=ry+'px';requestAnimationFrame(a)})();
+
+function filterDesign(btn,cat){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.exhibit-card').forEach(item=>{
+    const show=cat==='all'||item.dataset.cat===cat;
+    item.style.transition='opacity 0.4s,transform 0.4s';
+    item.style.opacity=show?'1':'0.1';
+    item.style.transform=show?'':'scale(0.97)';
+  });
+}
+const obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');obs.unobserve(en.target)}})},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

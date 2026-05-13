@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiruja Edurapola (SJ) | Software Engineer & Creative Technologist</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --bg-deep: #050507;
+            --bg-panel: #0E0E12;
+            --bg-glass: rgba(20, 20, 25, 0.6);
+            --primary-ember: #FF5E3A;
+            --accent-cyan: #00E5FF;
+            --text-main: #F7F7F7;
+            --text-muted: #8892b0;
+            --font-head: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --easing: cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: none; /* Custom cursor */
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* --- Custom Cursor --- */
+        .cursor-dot, .cursor-outline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: 9999;
+            pointer-events: none;
+        }
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--primary-ember);
+        }
+        .cursor-outline {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--accent-cyan);
+            transition: width 0.2s, height 0.2s;
+        }
+
+        /* --- Background Effects --- */
+        .scanline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1));
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 900;
+            opacity: 0.3;
+        }
+
+        /* --- Typography --- */
+        h1, h2, h3, h4 {
+            font-family: var(--font-head);
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #fff, var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* --- Layout --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 120px 0;
+            position: relative;
+        }
+
+        /* --- Nav --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 24px 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary-ember);
+        }
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin-left: 32px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+            transition: all 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--accent-cyan);
+            opacity: 1;
+        }
+
+        /* --- Hero Section --- */
+        #hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(3rem, 6vw, 5.5rem);
+            line-height: 1;
+            margin-bottom: 24px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 1s var(--easing) forwards 0.2s;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            opacity: 0;
+            animation: fadeUp 1s var(--easing) forwards 0.4s;
+        }
+
+        .hero-subtitle span {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 20px;
+            opacity: 0;
+            animation: fadeUp 1s var(--easing) forwards 0.6s;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            font-family: var(--font-head);
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: var(--primary-ember);
+            color: #000;
+        }
+        .btn-primary:hover {
+            box-shadow: 0 0 20px rgba(255, 94, 58, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-main);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .btn-outline:hover {
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+        }
+
+        /* Canvas Background for Hero */
+        #starfield {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* --- Featured Projects --- */
+        .section-header {
+            margin-bottom: 80px;
+        }
+        .section-tag {
+            color: var(--accent-cyan);
+            font-family: var(--font-head);
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+        .section-title {
+            font-size: 3rem;
+        }
+
+        .project-card {
+            background: var(--bg-panel);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 60px;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            transition: all 0.4s var(--easing);
+            position: relative;
+        }
+
+        .project-card:hover {
+            transform: scale(1.02);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        .project-image {
+            background: #1a1a20;
+            height: 100%;
+            min-height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s var(--easing);
+            opacity: 0.8;
+        }
+        
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+
+        .project-info {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .project-tech {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+        
+        .tech-badge {
+            font-size: 0.8rem;
+            color: var(--accent-cyan);
+            background: rgba(0, 229, 255, 0.1);
+            padding: 4px 12px;
+            border-radius: 100px;
+        }
+
+        .project-title {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+
+        .project-desc {
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            font-size: 1.1rem;
+        }
+
+        .btn-link {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+        .btn-link:hover {
+            color: var(--primary-ember);
+            gap: 12px;
+        }
+
+        /* --- About Timeline --- */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+            border-left: 2px solid rgba(255,255,255,0.1);
+        }
+        
+        .timeline-item {
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: -49px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            background: var(--bg-deep);
+            border: 2px solid var(--primary-ember);
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+        
+        .timeline-item:hover .timeline-dot {
+            background: var(--primary-ember);
+            box-shadow: 0 0 15px var(--primary-ember);
+        }
+
+        .timeline-date {
+            font-family: var(--font-head);
+            color: var(--primary-ember);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .timeline-content {
+            background: var(--bg-glass);
+            padding: 24px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* --- Skills Grid --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+        
+        .skill-card {
+            background: linear-gradient(145deg, #0f0f13, #050507);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.03);
+            transition: 0.3s;
+        }
+        
+        .skill-card:hover {
+            border-color: var(--accent-cyan);
+            transform: translateY(-5px);
+        }
+
+        .skill-icon {
+            color: var(--accent-cyan);
+            margin-bottom: 16px;
+        }
+
+        /* --- Contact --- */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 16px;
+            color: #fff;
+            margin-bottom: 20px;
+            font-family: var(--font-body);
+            transition: 0.3s;
+        }
+        
+        .contact-form input:focus, .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-ember);
+            background: rgba(255, 94, 58, 0.05);
+        }
+
+        /* --- Footer --- */
+        footer {
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding: 40px 0;
+            margin-top: 80px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .hero-grid, .project-card, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+            .project-image {
+                min-height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    
+    <div class="scanline"></div>
+
+    <nav>
+        <div class="container nav-inner">
+            <div class="logo">SJ.</div>
+            <div class="nav-links">
+                <a href="#projects">Work</a>
+                <a href="#about">Mission Log</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <canvas id="starfield"></canvas>
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>Architecting<br><span class="gradient-text">The Future.</span></h1>
+                <div class="hero-subtitle">
+                    <span>Web Developer</span>
+                    <span>Astronomer</span>
+                    <span>Game Dev</span>
+                </div>
+                <p style="color:var(--text-muted); margin-bottom:40px; max-width: 500px;">
+                    I'm Hiruja Edurapola (SJ). A 15-year-old technologist from Sri Lanka bridging the gap between deep space curiosity and digital innovation.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">
+                        View Projects <i data-lucide="arrow-right"></i>
+                    </a>
+                    <a href="#" class="btn btn-outline">
+                        Download CV <i data-lucide="download"></i>
+                    </a>
+                </div>
+            </div>
+            </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">SELECTED WORKS // 01</span>
+                <h2 class="section-title">Case Studies</h2>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1535551951406-a19828b8e76b?auto=format&fit=crop&q=80" alt="Skyora Project">
+                </div>
+                <div class="project-info">
+                    <div class="project-tech">
+                        <span class="tech-badge">Algorithms</span>
+                        <span class="tech-badge">Math</span>
+                        <span class="tech-badge">Web</span>
+                    </div>
+                    <h3 class="project-title">Skyora</h3>
+                    <p class="project-desc">
+                        An advanced image enhancement platform utilizing pure mathematical algorithms to reduce costs, completely bypassing traditional AI/ML dependencies.
+                    </p>
+                    <a href="#" class="btn-link">View Analysis <i data-lucide="arrow-up-right"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&q=80" alt="StudySync Project">
+                </div>
+                <div class="project-info">
+                    <div class="project-tech">
+                        <span class="tech-badge">Full-Stack</span>
+                        <span class="tech-badge">AI Integration</span>
+                        <span class="tech-badge">EdTech</span>
+                    </div>
+                    <h3 class="project-title">StudySync</h3>
+                    <p class="project-desc">
+                        A full-suite educational ecosystem featuring AI assistants, study plan generators, and collaborative tools designed to optimize student workflows.
+                    </p>
+                    <a href="#" class="btn-link">Explore Platform <i data-lucide="arrow-up-right"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&q=80" alt="SJ Trainer Chess">
+                </div>
+                <div class="project-info">
+                    <div class="project-tech">
+                        <span class="tech-badge">Game Logic</span>
+                        <span class="tech-badge">Data Analysis</span>
+                    </div>
+                    <h3 class="project-title">SJ Chess Trainer</h3>
+                    <p class="project-desc">
+                        A bias-free chess training engine. Unlike standard puzzles, it presents raw positions from real games, requiring pure calculation without preset tactical cues.
+                    </p>
+                    <a href="#" class="btn-link">Start Training <i data-lucide="arrow-up-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">IDENTITY // 02</span>
+                <h2 class="section-title">Mission Log</h2>
+            </div>
+
+            <div class="contact-grid"> <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-date">Present</span>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>SJ Research Labs</h4>
+                            <p style="color:var(--text-muted)">Pushing boundaries in web technologies and experimental software architecture.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">2023</span>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Lowa Wata Studios</h4>
+                            <p style="color:var(--text-muted)">Creative direction and multimedia production.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">Origins</span>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Sri Sumangala College</h4>
+                            <p style="color:var(--text-muted)">Where the journey in coding, chess, and astronomy began.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 style="margin-bottom: 24px;">Technical Arsenal</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <i data-lucide="code-2" class="skill-icon"></i>
+                            <h4>Web Development</h4>
+                            <p style="color:var(--text-muted); font-size: 0.9rem; margin-top:8px;">HTML5, CSS3 (SJML), JavaScript, React, Tailwind</p>
+                        </div>
+                        <div class="skill-card">
+                            <i data-lucide="terminal" class="skill-icon"></i>
+                            <h4>Software</h4>
+                            <p style="color:var(--text-muted); font-size: 0.9rem; margin-top:8px;">Python, C#, Swift, Algorithms</p>
+                        </div>
+                        <div class="skill-card">
+                            <i data-lucide="gamepad-2" class="skill-icon"></i>
+                            <h4>Creative</h4>
+                            <p style="color:var(--text-muted); font-size: 0.9rem; margin-top:8px;">Game Dev, Graphic Design, Video Editing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <span class="section-tag">TRANSMISSION // 03</span>
+                <h2 class="section-title">Initialize Contact</h2>
+                <p style="color:var(--text-muted); margin-top: 16px;">Have a project in mind or want to discuss the cosmos?</p>
+            </div>
+
+            <div style="max-width: 600px; margin: 0 auto;">
+                <form class="contact-form">
+                    <input type="text" placeholder="Callsign (Name)">
+                    <input type="email" placeholder="Frequency (Email)">
+                    <textarea rows="5" placeholder="Message content..."></textarea>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                        Send Transmission
+                    </button>
+                </form>
+
+                <div style="display: flex; justify-content: center; gap: 32px; margin-top: 40px;">
+                    <a href="https://github.com/HirujaEdurapola" class="btn-link" target="_blank"><i data-lucide="github"></i> GitHub</a>
+                    <a href="#" class="btn-link"><i data-lucide="instagram"></i> Instagram</a>
+                    <a href="#" class="btn-link"><i data-lucide="linkedin"></i> LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h3>SJ.</h3>
+            <p>&copy; 2026 Hiruja Edurapola. Built for the stars.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Custom Cursor Logic
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            // Dot follows instantly
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+
+            // Outline follows with lag via animation
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { duration: 500, fill: "forwards" });
+        });
+
+        // Interactive Starfield Logic
+        const canvas = document.getElementById('starfield');
+        const ctx = canvas.getContext('2d');
+        
+        let width, height;
+        let stars = [];
+
+        function resize() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+            initStars();
+        }
+
+        function initStars() {
+            stars = [];
+            const starCount = Math.floor(width * height / 3000); // Responsive star count
+            for (let i = 0; i < starCount; i++) {
+                stars.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    radius: Math.random() * 1.5,
+                    vx: (Math.random() - 0.5) * 0.2, // Slow movement
+                    vy: (Math.random() - 0.5) * 0.2,
+                    alpha: Math.random()
+                });
+            }
+        }
+
+        function drawStars() {
+            ctx.clearRect(0, 0, width, height);
+            ctx.fillStyle = '#fff';
+            
+            stars.forEach(star => {
+                ctx.globalAlpha = star.alpha;
+                ctx.beginPath();
+                ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+                ctx.fill();
+                
+                // Update position
+                star.x += star.vx;
+                star.y += star.vy;
+
+                // Wrap around screen
+                if (star.x < 0) star.x = width;
+                if (star.x > width) star.x = 0;
+                if (star.y < 0) star.y = height;
+                if (star.y > height) star.y = 0;
+            });
+
+            // Draw connections near mouse
+            // (Simple optimization: only connect stars close to each other for "constellation" effect could be added here)
+            
+            requestAnimationFrame(drawStars);
+        }
+
+        window.addEventListener('resize', resize);
+        resize();
+        drawStars();
+
+        // Reveal Animations on Scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.project-card, .timeline-item, .skill-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s cubic-bezier(0.23, 1, 0.32, 1)';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

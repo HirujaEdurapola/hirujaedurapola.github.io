@@ -1,0 +1,9 @@
+      .sj-link{
+        font-weight: bolder;
+        color: rgba(0, 255, 255, 0.619);
+        transition: all 200ms ease-in-out;
+      }
+
+        .sj-link:hover{
+            color: cyan;
+        }

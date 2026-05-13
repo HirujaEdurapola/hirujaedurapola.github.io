@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission Logs | Hiruja Edurapola (SJ)</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --bg-deep: #050507;
+            --bg-panel: #0E0E12;
+            --bg-glass: rgba(20, 20, 25, 0.8);
+            --primary-ember: #FF5E3A;
+            --accent-cyan: #00E5FF;
+            --text-main: #F7F7F7;
+            --text-muted: #8892b0;
+            --font-head: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            --easing: cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: none;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* --- Cursor & Effects (Shared) --- */
+        .cursor-dot, .cursor-outline {
+            position: fixed;
+            top: 0; left: 0;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: 9999;
+            pointer-events: none;
+        }
+        .cursor-dot { width: 8px; height: 8px; background: var(--primary-ember); }
+        .cursor-outline { width: 40px; height: 40px; border: 1px solid var(--accent-cyan); transition: 0.1s; }
+        
+        .scanline {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1));
+            background-size: 100% 4px;
+            pointer-events: none; z-index: 900; opacity: 0.3;
+        }
+
+        /* --- Layout --- */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        .nav-spacer { height: 100px; }
+
+        /* --- Nav --- */
+        nav {
+            position: fixed; top: 0; width: 100%; padding: 24px 0; z-index: 100;
+            backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 24px;}
+        .logo { font-family: var(--font-head); font-weight: 800; font-size: 1.5rem; color: var(--primary-ember); text-decoration: none;}
+        .nav-links a { color: var(--text-main); text-decoration: none; margin-left: 32px; font-size: 0.9rem; opacity: 0.7; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent-cyan); opacity: 1; }
+
+        /* --- Blog Header --- */
+        .blog-header {
+            padding: 100px 0 60px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .blog-title {
+            font-family: var(--font-head);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 16px;
+        }
+        
+        .blog-subtitle {
+            color: var(--text-muted);
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        /* --- Blog Grid (Index) --- */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .blog-card {
+            background: var(--bg-panel);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s var(--easing);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .blog-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 2px;
+            background: linear-gradient(90deg, var(--primary-ember), transparent);
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255,255,255,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .blog-card:hover::before { opacity: 1; }
+
+        .card-thumb {
+            height: 200px;
+            background: #15151a;
+            overflow: hidden;
+        }
+        
+        .card-thumb img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.5s var(--easing);
+            opacity: 0.8;
+        }
+        
+        .blog-card:hover .card-thumb img { transform: scale(1.1); opacity: 1; }
+
+        .card-content { padding: 24px; flex-grow: 1; display: flex; flex-direction: column; }
+        
+        .card-meta {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--accent-cyan);
+            margin-bottom: 12px;
+            display: flex; justify-content: space-between;
+        }
+
+        .card-title {
+            font-family: var(--font-head);
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        .card-title a { text-decoration: none; color: #fff; transition: 0.2s; }
+        .card-title a:hover { color: var(--primary-ember); }
+
+        .card-excerpt {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .read-more {
+            font-size: 0.9rem;
+            color: #fff;
+            text-decoration: none;
+            display: inline-flex; align-items: center; gap: 8px;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+        .read-more:hover { color: var(--accent-cyan); gap: 12px; }
+
+        /* --- Single Post Styles (Use inside article tags) --- */
+        .post-content {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .post-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .post-meta {
+            display: flex; justify-content: center; gap: 20px;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .post-content p { margin-bottom: 24px; font-size: 1.1rem; color: #d1d5db; }
+        
+        .post-content h2 { 
+            font-family: var(--font-head); 
+            font-size: 2rem; 
+            margin: 40px 0 20px; 
+            color: #fff;
+            border-left: 3px solid var(--primary-ember);
+            padding-left: 16px;
+        }
+
+        .post-content code {
+            background: rgba(255,255,255,0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: var(--font-mono);
+            font-size: 0.9em;
+            color: var(--accent-cyan);
+        }
+
+        .post-content pre {
+            background: #0f0f13;
+            padding: 24px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+            overflow-x: auto;
+            margin-bottom: 30px;
+        }
+
+        .post-content pre code {
+            background: transparent;
+            padding: 0;
+            color: #a9b1d6;
+        }
+
+        .post-content blockquote {
+            border-left: 2px solid var(--accent-cyan);
+            background: rgba(0, 229, 255, 0.05);
+            padding: 20px 30px;
+            margin: 30px 0;
+            font-style: italic;
+            color: #e0f2f1;
+        }
+
+        /* --- Footer --- */
+        footer {
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding: 40px 0;
+            margin-top: 100px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .blog-grid { grid-template-columns: 1fr; }
+            .blog-title { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div class="scanline"></div>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="/" class="logo">SJ.</a>
+            <div class="nav-links">
+                <a href="/">Terminal</a>
+                <a href="/diary" style="color:var(--primary-ember); opacity:1;">Logs</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="nav-spacer"></div>
+
+    <main class="container">
+
+        <header class="blog-header">
+            <div class="blog-subtitle">// CLASSIFIED RECORDS</div>
+            <h1 class="blog-title">Mission Logs</h1>
+            <p style="color:var(--text-muted); max-width: 500px; margin: 0 auto;">
+                Thoughts on code, the cosmos, and everything in between.
+            </p>
+        </header>
+
+        <div class="blog-grid">
+            <article class="blog-card">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span>DIARY</span>
+                        <span>CODING</span>
+                    </div>
+                    <h3 class="card-title"><a href="./diary/coding.html">🧑🏽‍💻 My Coding Career</a></h3>
+                    <p class="card-excerpt">
+                        I’ve been coding for about 7 years, from Arduino and Scratch to web apps, games, and Python backend projects.
+                    </p>
+                    <a href="./diary/coding.html" class="read-more">Read Post <i data-lucide="arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span>DIARY</span>
+                        <span>CUBING</span>
+                    </div>
+                    <h3 class="card-title"><a href="./diary/cubing.html">🔥 My Speedcubing Journey</a></h3>
+                    <p class="card-excerpt">
+                        A hobby that became discipline: learning advanced methods, training routines, and the mental game behind faster solves.
+                    </p>
+                    <a href="./diary/cubing.html" class="read-more">Read Post <i data-lucide="arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span>DIARY</span>
+                        <span>CHESS</span>
+                    </div>
+                    <h3 class="card-title"><a href="./diary/chess.html">♟️ My Journey as a Chess Player</a></h3>
+                    <p class="card-excerpt">
+                        From the school chess club to tournament wins, this entry explores how chess shaped my strategy and mindset.
+                    </p>
+                    <a href="./diary/chess.html" class="read-more">Read Post <i data-lucide="arrow-right"></i></a>
+                </div>
+            </article>
+
+        </div>
+
+        </main>
+
+    <footer>
+        <div class="container">
+            <h3>SJ.</h3>
+            <p>&copy; 2026 Hiruja Edurapola. End of transmission.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Custom Cursor Logic
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+            cursorOutline.animate({ left: `${posX}px`, top: `${posY}px` }, { duration: 500, fill: "forwards" });
+        });
+    </script>
+</body>
+</html>
