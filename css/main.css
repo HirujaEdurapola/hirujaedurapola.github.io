@@ -1146,6 +1146,108 @@ section { position: relative; overflow: hidden; }
   box-shadow: 0 12px 40px rgba(255,94,58,0.4);
 }
 
+/* ═══ AVAILABILITY ═══ */
+#availability { background: var(--bg-2); }
+
+.avail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.avail-day {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 22px 24px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.avail-day:hover {
+  border-color: rgba(0,229,255,0.2);
+  transform: translateY(-3px);
+}
+.avail-day--weekend {
+  border-color: rgba(255,94,58,0.14);
+}
+.avail-day--weekend:hover {
+  border-color: rgba(255,94,58,0.35);
+}
+
+.avail-day-name {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 13px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 14px;
+}
+.avail-day--weekend .avail-day-name {
+  color: var(--orange);
+}
+
+.avail-slots {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.avail-slot {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  color: var(--white);
+  background: var(--faint);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 6px 14px;
+}
+.avail-day--weekend .avail-slot {
+  background: rgba(255,94,58,0.05);
+  border-color: rgba(255,94,58,0.12);
+}
+
+.avail-notices {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 24px 28px;
+}
+
+.avail-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.avail-notice + .avail-notice {
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.avail-notice-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+  line-height: 1.5;
+}
+
+/* Availability responsive */
+@media (max-width: 768px) {
+  .avail-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .avail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ═══ FOOTER ═══ */
 footer {
   background: var(--bg);
